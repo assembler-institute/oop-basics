@@ -82,3 +82,19 @@ class Iphone extends Mobile{
         return "This iPhone includes a " . $this->processor . " processor and " . $this->precio . "GB of internal memory. It uses iOS ".$this->ios;
     }
 }
+
+$samsung = new Samsung('Exynos',128, 10.0); 
+
+echo "<pre>";
+var_dump($samsung);
+echo "</pre>";
+echo $samsung->getProcessor();
+echo $samsung->getIos();
+
+
+$iphone = new Iphone('A14 Bionic',128, 14.1); 
+echo "<pre>";
+var_dump($iphone);
+echo "</pre>";
+echo $iphone->getProcessor();
+echo $iphone->getIos();
