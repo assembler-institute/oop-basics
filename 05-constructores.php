@@ -3,21 +3,21 @@
 // constructors get called automatically when an object of this class is created
 
 class Mobile {
-    public $processor;
+    public $chipset;
     public $internalMemory;
 
     // in php we use __construct to tell our class that this is the constructor method
-    public function __construct( $processor, $internalMemory )
+    public function __construct( $chipset, $internalMemory )
     {
         // when we create a constructor we can add arguments and then initialize the properties with those argument values
-        $this->processor = $processor;
+        $this->chipset = $chipset;
         $this->internalMemory = $internalMemory;
     }
 
     // methods for getting both properties
     public function getProcessor()
     {
-        return $this->processor;
+        return $this->chipset;
     }
 
     public function getInternalMemory()
@@ -28,7 +28,7 @@ class Mobile {
     // method that returns both properties in a string.
     public function getSpecs()
     {
-        return "This mobile includes a " . $this->processor . " processor and " . $this->precio . "GB of internal memory";
+        return "This mobile includes a " . $this->chipset . " chipset and " . $this->internalMemory . "GB of internal memory";
     }
 }
 

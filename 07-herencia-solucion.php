@@ -1,21 +1,21 @@
 <?php
 
 class Mobile {
-    public $processor;
+    public $chipset;
     public $internalMemory;
 
     // in php we use __construct to tell our class that this is the constructor method
-    public function __construct( $processor, $internalMemory )
+    public function __construct( $chipset, $internalMemory )
     {
         // when we create a constructor we can add arguments and then initialize the properties with those argument values
-        $this->processor = $processor;
+        $this->chipset = $chipset;
         $this->internalMemory = $internalMemory;
     }
 
     // methods for getting both properties
     public function getProcessor()
     {
-        return $this->processor;
+        return $this->chipset;
     }
 
     public function getInternalMemory()
@@ -26,22 +26,21 @@ class Mobile {
     // method that returns both properties in a string.
     public function getSpecs()
     {
-        return "This mobile includes a " . $this->processor . " processor and " . $this->precio . "GB of internal memory";
+        return "This mobile includes a " . $this->chipset . " chipset and " . $this->precio . "GB of internal memory";
     }
 }
 
-
 //When you extend a class, the subclass inherits all of the public and protected methods from the parent class.
-class Samsung extends Mobile{
-    public $android;
+class Blackberry extends Mobile{
+    public $keyboard;
 
     // in php we use __construct to tell our class that this is the constructor method
-    public function __construct( $processor, $internalMemory, $android )
+    public function __construct( $chipset, $internalMemory, $keyboard )
     {
         //we use same constructor as father class
-        parent::__construct( $processor, $internalMemory );
+        parent::__construct( $chipset, $internalMemory );
         // and add new arguments necessary for the new son class
-        $this->android = $android;
+        $this->keyboard = $keyboard;
     }
 
     //new method for getting ios version
@@ -53,48 +52,14 @@ class Samsung extends Mobile{
     // we override getSpecs in this class
     public function getSpecs()
     {
-        return "This Android Mobile includes a " . $this->processor . " processor and " . $this->precio . "GB of internal memory. It uses Android ".$this->android;
+        return "This mobile includes a " . $this->chipset . " chipset and " . $this->internalMemory . "GB of internal memory. It uses " . $this->keyboard . " Keyboard";
     }
 }
 
-//When you extend a class, the subclass inherits all of the public and protected methods from the parent class.
-class Iphone extends Mobile{
-    public $ios;
-
-    // in php we use __construct to tell our class that this is the constructor method
-    public function __construct( $processor, $internalMemory, $ios )
-    {
-        //we use same constructor as father class
-        parent::__construct( $processor, $internalMemory );
-        // and add new arguments necessary for the new son class
-        $this->ios = $ios;
-    }
-
-    //new method for getting ios version
-    public function getIos()
-    {
-        return $this->ios;
-    }
-
-    // we override getSpecs in this class
-    public function getSpecs()
-    {
-        return "This iPhone includes a " . $this->processor . " processor and " . $this->precio . "GB of internal memory. It uses iOS ".$this->ios;
-    }
-}
-
-$samsung = new Samsung('Exynos',128, 10.0); 
+$blackberry = new BlackBerry('Qualcomm',128, 'qwerty');
 
 echo "<pre>";
-var_dump($samsung);
+var_dump($blackberry);
 echo "</pre>";
-echo $samsung->getProcessor();
-echo $samsung->getIos();
-
-
-$iphone = new Iphone('A14 Bionic',128, 14.1); 
-echo "<pre>";
-var_dump($iphone);
-echo "</pre>";
-echo $iphone->getProcessor();
-echo $iphone->getIos();
+echo $blackberry->getProcessor();
+echo $blackberry->getKeyboard();
