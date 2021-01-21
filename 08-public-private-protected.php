@@ -36,15 +36,15 @@ class Mobile {
         return $this->internalMemory;
     }
 
+    public function getIMEI()
+    {
+        return $this->imei;
+    }
+
     // method that returns both properties in a string.
     public function getSpecs()
     {
         return $this->name . " includes a " . $this->chipset . " chipset and " . $this->internalMemory . "GB of internal memory";
-    }
-
-    public function getIMEI()
-    {
-        return $this->imei;
     }
 }
 
