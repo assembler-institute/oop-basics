@@ -64,6 +64,7 @@ class Blackberry {
         return $this->internalMemory;
     }
 
+    //new method for getting keyboard type
     public function getKeyboard()
     {
         return $this->keyboard;
@@ -76,6 +77,14 @@ class Blackberry {
     }
 }
 
+$iphone = new Mobile('A12 Bionic',64);
+
+echo "<pre>";
+var_dump($iphone);
+echo "</pre>";
+echo $iphone->getSpecs();
+
+
 $blackberry = new BlackBerry('Qualcomm',128, 'qwerty');
 
 echo "<pre>";
@@ -83,3 +92,4 @@ var_dump($blackberry);
 echo "</pre>";
 echo $blackberry->getProcessor();
 echo $blackberry->getKeyboard();
+echo $blackberry->getSpecs();
