@@ -1,19 +1,26 @@
 <?php
 
 class Mobile {
+    public $name;
     public $chipset;
     public $internalMemory;
 
     // in php we use __construct to tell our class that this is the constructor method
-    public function __construct( $chipset, $internalMemory )
+    public function __construct( $name, $chipset, $internalMemory )
     {
         // when we create a constructor we can add arguments and then initialize the properties with those argument values
+        $this->name = $name;
         $this->chipset = $chipset;
         $this->internalMemory = $internalMemory;
     }
 
-    // methods for getting both properties
-    public function getProcessor()
+    // methods for getting properties
+    public function getName()
+    {
+        return "---".$this->name."---";
+    }
+
+    public function getChipset()
     {
         return $this->chipset;
     }
@@ -26,7 +33,7 @@ class Mobile {
     // method that returns both properties in a string.
     public function getSpecs()
     {
-        return "This mobile includes a " . $this->chipset . " chipset and " . $this->precio . "GB of internal memory";
+        return $this->name . " includes a " . $this->chipset . " chipset and " . $this->internalMemory . "GB of internal memory";
     }
 }
 
@@ -35,10 +42,10 @@ class Blackberry extends Mobile{
     public $keyboard;
 
     // in php we use __construct to tell our class that this is the constructor method
-    public function __construct( $chipset, $internalMemory, $keyboard )
+    public function __construct( $name, $chipset, $internalMemory, $keyboard )
     {
         //we use same constructor as father class
-        parent::__construct( $chipset, $internalMemory );
+        parent::__construct( $name, $chipset, $internalMemory );
         // and add new arguments necessary for the new son class
         $this->keyboard = $keyboard;
     }
@@ -52,22 +59,35 @@ class Blackberry extends Mobile{
     // we override getSpecs in this class
     public function getSpecs()
     {
-        return "This mobile includes a " . $this->chipset . " chipset and " . $this->internalMemory . "GB of internal memory. It uses " . $this->keyboard . " Keyboard";
+        return $this->name . " includes a " . $this->chipset . " chipset and " . $this->internalMemory . "GB of internal memory. It uses " . $this->keyboard . " Keyboard";
     }
 }
 
-$iphone = new Mobile('A12 Bionic',64);
+$samsung = new Mobile('Samsung s20','Exynos',128);
+
+echo $samsung->getName();
 
 echo "<pre>";
-var_dump($iphone);
+var_dump($samsung);
 echo "</pre>";
-echo $iphone->getSpecs();
 
-$blackberry = new BlackBerry('Qualcomm',128, 'qwerty');
+echo $samsung->getChipset();
+echo "<br>";
+echo $samsung->getSpecs();
+
+echo "<br>";
+echo "<br>";
+
+$blackberry = new BlackBerry('BlackBerry','ARM',1, 'qwerty');
+
+echo $blackberry->getName();
 
 echo "<pre>";
 var_dump($blackberry);
 echo "</pre>";
-echo $blackberry->getProcessor();
+
+echo $blackberry->getChipset();
+echo "<br>";
 echo $blackberry->getKeyboard();
+echo "<br>";
 echo $blackberry->getSpecs();

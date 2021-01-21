@@ -1,22 +1,23 @@
 <?php
-
-// There are 4 basic principles in OOP
-// Inheritance, Encapsulation, Abstraction and Polymorphism
-
-//Lets see this example to talk about Inheritance
+// We have three visibility levels for properties and methods of a class: public, protected, and private.
 
 class Mobile {
     public $name;
-    public $chipset;
-    public $internalMemory;
+    protected $chipset;  //protected elements can be accessed only within the class itself and by inheriting and parent classes.
+    protected $internalMemory;
+
+    private $imei; //private elements may only be accessed by the class that defines the member.
+
+    //public elements can be accessed everywhere
 
     // in php we use __construct to tell our class that this is the constructor method
-    public function __construct( $name, $chipset, $internalMemory )
+    public function __construct( $name, $chipset, $internalMemory, $imei )
     {
         // when we create a constructor we can add arguments and then initialize the properties with those argument values
         $this->name = $name;
         $this->chipset = $chipset;
         $this->internalMemory = $internalMemory;
+        $this->imei = $imei;
     }
 
     // methods for getting properties
@@ -40,42 +41,24 @@ class Mobile {
     {
         return $this->name . " includes a " . $this->chipset . " chipset and " . $this->internalMemory . "GB of internal memory";
     }
+
+    public function getIMEI()
+    {
+        return $this->imei;
+    }
 }
 
-//We need a class for mobiles with extra properties and methods that won't have every mobile 
-//For example we could need a class for a mobile device with physical keyboard so we create a new one
-
-class Blackberry {
-    public $name;
-    public $chipset;
-    public $internalMemory;
+//When you extend a class, the subclass inherits all of the public and protected methods from the parent class.
+class Blackberry extends Mobile{
     public $keyboard;
 
-
     // in php we use __construct to tell our class that this is the constructor method
-    public function __construct( $name, $chipset, $internalMemory, $keyboard )
+    public function __construct( $name, $chipset, $internalMemory, $imei, $keyboard )
     {
-        // when we create a constructor we can add arguments and then initialize the properties with those argument values
-        $this->name = $name;
-        $this->chipset = $chipset;
-        $this->internalMemory = $internalMemory;
+        //we use same constructor as father class
+        parent::__construct( $name, $chipset, $internalMemory, $imei );
+        // and add new arguments necessary for the new son class
         $this->keyboard = $keyboard;
-    }
-
-    // methods for getting properties
-    public function getName()
-    {
-        return "---".$this->name."---";
-    }
-
-    public function getChipset()
-    {
-        return $this->chipset;
-    }
-
-    public function getInternalMemory()
-    {
-        return $this->internalMemory;
     }
 
     //new method for getting keyboard type
@@ -84,14 +67,14 @@ class Blackberry {
         return $this->keyboard;
     }
 
-    // method that returns both properties in a string.
+    // we override getSpecs in this class
     public function getSpecs()
     {
         return $this->name . " includes a " . $this->chipset . " chipset and " . $this->internalMemory . "GB of internal memory. It uses " . $this->keyboard . " Keyboard";
     }
 }
 
-$samsung = new Mobile('Samsung s20','Exynos',128);
+$samsung = new Mobile('Samsung s20','Exynos',128,'000111222333');
 
 echo $samsung->getName();
 
@@ -99,14 +82,14 @@ echo "<pre>";
 var_dump($samsung);
 echo "</pre>";
 
-echo $samsung->getChipset();
+echo $samsung->getIMEI();
 echo "<br>";
 echo $samsung->getSpecs();
 
 echo "<br>";
 echo "<br>";
 
-$blackberry = new BlackBerry('BlackBerry','ARM',1, 'qwerty');
+$blackberry = new BlackBerry('BlackBerry','ARM',1,'99966688555','qwerty');
 
 echo $blackberry->getName();
 
@@ -119,3 +102,9 @@ echo "<br>";
 echo $blackberry->getKeyboard();
 echo "<br>";
 echo $blackberry->getSpecs();
+
+//TODO: ejemplos errores al acceder a elementos no publicos
+//with this scenario we can't access private or protected attributes via arrow operator
+echo $samsung->chipset; //ERROR
+//echo $samsung->imei; //ERROR
+echo "<br>";

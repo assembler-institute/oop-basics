@@ -1,5 +1,4 @@
-<?php include 'includes/header.php';
-
+<?php
 // To create classes we use reserved word class.
 class Mobile {}
 
@@ -10,5 +9,6 @@ $oldMobile = new Mobile();
 
 //with var_dump we can visualize our new objects
 var_dump($modernMobile);
+echo "<br>";
 var_dump($oldMobile);
 
