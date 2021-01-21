@@ -8,9 +8,13 @@ class Internet {
 
     //self word can be used to call static elements inside the same class
     public function __construct() {
-        self::connectInternet();
+        echo self::connectInternet();
     }
 }
+
+echo "<br>";
+new Internet();
+echo "<br>";
 
 class Mobile {
     public $name;
