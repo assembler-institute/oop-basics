@@ -1,11 +1,19 @@
-<?php 
-// An abstract class cannot be instantiated, only inherited. We can declare an abstract class with the keyword abstract.
-// When inheriting from an abstract class, all methods marked abstract in the parent's class declaration must be defined by the child.
+<?php
 
+// constants as unchangeable, we can use the word const to create them. The default visibility of class constants is public.
 class Internet {
+    const APPSERVER = '132.2.33.4';
+    const APPNAME = 'ASSEMBLER APP';
+
     public static function connectInternet()
     {
         return "connecting to the internet...";
+    }
+
+    public static function connectApp()
+    {
+        //we can use constants inside our class with self and double colon
+        return "connecting to " . self::APPSERVER . "...";
     }
 
     //self word can be used to call static elements inside the same class
@@ -33,9 +41,9 @@ abstract class Mobile {
         $this->imei = $imei;
     }
 
-    public function connectMobileInternet()
+    public function runMobileApp()
     {
-        return $this->name . " : " .Internet::connectInternet();
+        return $this->name . " RUNS " . Internet::APPNAME . " : " . Internet::connectApp();
     }
 
     // methods for getting properties
@@ -115,4 +123,4 @@ echo $blackberry->getKeyboard();
 echo "<br>";
 echo $blackberry->getSpecs();
 echo "<br>";
-echo $blackberry->connectMobileInternet();
+echo $blackberry->runMobileApp();
