@@ -1,6 +1,7 @@
 <?php
+// An abstract class cannot be instantiated, only inherited. We can declare an abstract class with the keyword abstract.
+// When inheriting from an abstract class, all methods marked abstract in the parent's class declaration must be defined by the child.
 
-// constants as unchangeable, we can use the word const to create them. The default visibility of class constants is public.
 class Internet {
     const APPSERVER = '132.2.33.4';
     const APPNAME = 'ASSEMBLER APP';
