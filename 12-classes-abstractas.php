@@ -14,12 +14,11 @@ class Internet {
 
     public static function connectInternet()
     {
-        //we can use constants inside our class with self and double colon
         return "connecting to " . self::SERVER . "...";
     }
 }
 
-// we convert Mobile class into an abstract class
+// We convert Mobile class into an abstract class
 abstract class Mobile {
     public $name;
     protected $chipset;
@@ -54,5 +53,5 @@ class Blackberry extends Mobile{
 $blackberry = new BlackBerry('BlackBerry','ARM',1,'99966688555','qwerty');
 echo $blackberry->runMobileApp();
 
-// We cannot instantiate abstract classes by itself!!
+// We cannot instantiate an abstract class by itself!!
 $samsung = new Mobile('Samsung s20','Exynos',128,'000111222333'); // Fatal error: Uncaught Error: Cannot instantiate abstract class Mobile

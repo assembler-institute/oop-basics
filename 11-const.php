@@ -5,7 +5,7 @@
 
 /* File 11 - Constants */
 
-// constants as unchangeable, we can use the word const to create them. The default visibility of class constants is public.
+// constants are unchangeable, we can use the word const to create them. The default visibility of class constants is public.
 const APPNAME = 'ASSEMBLER APP';
 
 class Internet {
@@ -13,7 +13,7 @@ class Internet {
 
     public static function connectInternet()
     {
-        //we can use constants inside our class with self and double colon
+        // We can refer to constants inside our class with self and double colon
         return "connecting to " . self::SERVER . "...";
     }
 }
@@ -33,7 +33,7 @@ class Mobile {
         echo "+ CREATED " . $this->name . " WITH " . $this->internalMemory . " INTERNAL MEMORY +<br>";
     }
 
-    //we can access CONST with class name and double colon
+    // We can access constants with just name
     public function runMobileApp()
     {
         return $this->name . " RUNS " . APPNAME . " : " . Internet::connectInternet();

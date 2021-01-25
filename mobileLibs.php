@@ -3,7 +3,7 @@
 //we set namespace name
 namespace Lib;
 
-
+// External library interface with same name as main one
 interface mobileApp {
     // Interfaces cannot have properties
 
@@ -13,7 +13,7 @@ interface mobileApp {
     public static function showData();
 }
 
-//external library interface
+// External library classes with also same name
 class assemblerApp implements mobileApp{
 
     const APPNAME = 'LIB APP';
@@ -39,6 +39,7 @@ class assemblerApp implements mobileApp{
         echo "@@@ BYE " . self::APPNAME . " BYE @@@";
     }
 }
+
 
 class Internet {
     const SERVER = '122.23.4.9';

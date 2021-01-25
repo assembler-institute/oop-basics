@@ -17,22 +17,16 @@
 include 'mobileLibs.php';
 
 interface mobileApp {
-    // Interfaces cannot have properties
-
-    // All interface methods must be public
     public static function showSplashScreen();
     public static function getData();
     public static function showData();
 }
 
-// To implement an interface, the implements operator is used
 class assemblerApp implements mobileApp{
 
     const APPNAME = 'ASSEMBLER APP';
     public static $data;
 
-    // We have to declare every method described in the interface. If we miss a method we'll get a fatal error:
-    // Fatal error: Class assemblerApp contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (mobileApp::methodName)
     public static function showSplashScreen()
     {
         echo "@@@ " . self::APPNAME . " @@@";
@@ -48,7 +42,6 @@ class assemblerApp implements mobileApp{
         echo self::$data;
     }
 
-    // We can add methods not present in the interface
     public static function  exitApp()
     {
         echo "@@@ BYE " . self::APPNAME . " BYE @@@";
@@ -92,7 +85,7 @@ abstract class Mobile {
 
     public function runAssemblerAppLib()
     {
-        //we use namespace for calling our library methods
+        // We use the namespace for calling our library methods
         Lib\assemblerApp::showSplashScreen();
         echo "<br>";
         Lib\assemblerApp::getData();

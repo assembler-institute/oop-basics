@@ -10,7 +10,7 @@
 
 class Mobile {
     public $name; // public makes sure we can access this properties outside the class.
-    private $chipset; //private elements may only be accessed by the class that defines the member.
+    private $chipset; // private elements may only be accessed by the class that defines the member.
     private $internalMemory;
     private $imei;
 
@@ -23,7 +23,7 @@ class Mobile {
         echo "+ " . $this->name . " CREATED +<br>";
     }
 
-    // now getters methods meke sense
+    // now getters methods meke more sense because we won't be able to access properties outside the class
     public function getName()
     {
         return "--- ".$this->name." ---<br>";
@@ -46,22 +46,13 @@ class Mobile {
     }
 }
 
-//When you extend a class, the subclass inherits all of the public and protected methods from the parent class.
 class Blackberry extends Mobile{
     protected $keyboard;
 
     public function __construct( $name, $chipset, $internalMemory, $imei, $keyboard )
     {
-        //we use same constructor as father class
         parent::__construct( $name, $chipset, $internalMemory, $imei );
-        // and add new arguments necessary for the new son class
         $this->keyboard = $keyboard;
-    }
-
-    //new method for getting keyboard type
-    public function getKeyboard()
-    {
-        return $this->keyboard;
     }
 
     // show protected imei

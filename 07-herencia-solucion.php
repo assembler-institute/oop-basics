@@ -26,17 +26,23 @@ class Mobile {
     }
 }
 
-//When you extend a class, the subclass inherits all of the public and protected methods from the parent class.
+// When you extend a class, the subclass inherits all of the public and protected methods from the parent class.
 class Blackberry extends Mobile{
     public $keyboard;
 
     // in php we use __construct to tell our class that this is the constructor method
     public function __construct( $name, $chipset, $internalMemory, $keyboard )
     {
-        //we use same constructor as father class
+        // we use same constructor as father class with parent keyword and double colon
         parent::__construct( $name, $chipset, $internalMemory );
         // and add new arguments necessary for the new son class
         $this->keyboard = $keyboard;
+    }
+
+    //new method for getting keyboard type
+    public function getKeyboard()
+    {
+        return $this->keyboard;
     }
 
     function __destruct() {

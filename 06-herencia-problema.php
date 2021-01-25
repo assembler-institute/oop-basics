@@ -26,8 +26,8 @@ class Mobile {
     }
 }
 
-//We need a class for mobiles with extra properties and methods that won't have every mobile
-//For example we could need a class for a mobile device with physical keyboard so we create a new one
+// We need a class for mobiles with extra properties and methods that won't have every mobile
+// For example we could need a class for a mobile device with physical keyboard so we create a new one
 
 class Blackberry {
     public $name;
@@ -43,6 +43,12 @@ class Blackberry {
         $this->internalMemory = $internalMemory;
         $this->keyboard = $keyboard;
         echo "+ " . $this->name . " CREATED +<br>";
+    }
+
+    //new method for getting keyboard type
+    public function getKeyboard()
+    {
+        return $this->keyboard;
     }
 
     function __destruct() {

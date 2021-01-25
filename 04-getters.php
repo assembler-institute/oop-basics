@@ -45,7 +45,7 @@ echo $modernMobile->getInternalMemory();
 
 
 //-----------------------------------------------------
-// with this scenario where all properties are public 
+// with this scenario where all properties are public
 // there won't be any differences between using getters
 // or accessing  the properties via arrow operator
 //-----------------------------------------------------
