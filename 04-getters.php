@@ -1,7 +1,11 @@
 <?php
+//======================================================================
+// ASSEMBLER SCHOOL - PHP Object Oriented Programming
+//======================================================================
 
-//getters are methods for getting properties values in case we can't access them directly, we'll talk later about why we couldn't access properties in some scenarios
+/* File 04 - Getters */
 
+// Encapsulation is one of the principles in OOP, we use getters methods in order to keep information safe.
 class Mobile {
     public $name;
     public $chipset;
@@ -10,7 +14,7 @@ class Mobile {
     // methods for getting properties
     public function getName()
     {
-        return "---".$this->name."---";
+        return "--- ".$this->name." ---";
     }
 
     public function getChipset()
@@ -23,11 +27,6 @@ class Mobile {
         return $this->internalMemory;
     }
 
-    // method that returns both properties in a string.
-    public function getSpecs()
-    {
-        return $this->name . " includes a " . $this->chipset . " chipset and " . $this->internalMemory . "GB of internal memory";
-    }
 }
 
 
@@ -36,16 +35,25 @@ $modernMobile->name = "Samsung s20";
 $modernMobile->chipset = "Exynos";
 $modernMobile->internalMemory = 128;
 
+echo "--- GETTERS ---";
+echo "<br>";
 echo $modernMobile->getName();
 echo "<br>";
 echo $modernMobile->getChipset();
 echo "<br>";
 echo $modernMobile->getInternalMemory();
 
-echo "<br>";
+
+//-----------------------------------------------------
+// with this scenario where all properties are public 
+// there won't be any differences between using getters
+// or accessing  the properties via arrow operator
+//-----------------------------------------------------
+
+echo "<br><br>";
+echo "--- ARROW OPERATOR ---";
 echo "<br>";
 
-//with this scenario there won't be any differences between using getters or accessing  the properties via arrow operator
 echo $modernMobile->name;
 echo "<br>";
 echo $modernMobile->chipset;

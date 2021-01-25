@@ -1,9 +1,14 @@
 <?php
+//======================================================================
+// ASSEMBLER SCHOOL - PHP Object Oriented Programming
+//======================================================================
+
+/* File 13 - Interfaces */
+
 // Interfaces allows specifying what methods a class should implement.
 // they make it easy to use a variety of different classes in the same way.
 // When one or more classes use the same interface, it is referred to as "polymorphism".
 // Interfaces are declared with the interface keyword
-
 interface mobileApp {
     // Interfaces cannot have properties
 
@@ -13,152 +18,81 @@ interface mobileApp {
     public static function showData();
 }
 
-//To implement an interface, the implements operator is used
+// To implement an interface, the implements operator is used
 class assemblerApp implements mobileApp{
 
-    const APPSERVER = '132.2.33.4';
     const APPNAME = 'ASSEMBLER APP';
-
     public static $data;
 
+    // We have to declare every method described in the interface. If we miss a method we'll get a fatal error:
+    // Fatal error: Class assemblerApp contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (mobileApp::methodName)
     public static function showSplashScreen()
     {
-        echo "---" . self::APPNAME . "---";
+        echo "@@@ " . self::APPNAME . " @@@";
     }
 
     public static function getData()
     {
-        self::$data = self::APPNAME . " connecting to " . Internet::connectApp(self::APPSERVER);
+        self::$data = self::APPNAME . " " . Internet::connectInternet();
     }
 
     public static function showData()
     {
         echo self::$data;
     }
+
+    // We can add methods not present in the interface
+    public static function  exitApp()
+    {
+        echo "@@@ BYE " . self::APPNAME . " BYE @@@";
+    }
 }
 
 class Internet {
+    const SERVER = '122.23.4.5';
 
     public static function connectInternet()
     {
-        return "connecting to the internet...";
-    }
-
-    public static function connectApp($server)
-    {
-        //we can use constants inside our class with self and double colon
-        return "connecting to " . $server . "...";
-    }
-
-    //self word can be used to call static elements inside the same class
-    public function __construct() {
-        echo self::connectInternet();
+        return "connecting to " . self::SERVER . "...";
     }
 }
 
 abstract class Mobile {
     public $name;
-    protected $chipset;  //protected elements can be accessed only within the class itself and by inheriting and parent classes.
+    protected $chipset;
     protected $internalMemory;
+    private $imei;
 
-    private $imei; //private elements may only be accessed by the class that defines the member.
-
-    //public elements can be accessed everywhere
-
-    // in php we use __construct to tell our class that this is the constructor method
     public function __construct( $name, $chipset, $internalMemory, $imei )
     {
-        // when we create a constructor we can add arguments and then initialize the properties with those argument values
         $this->name = $name;
         $this->chipset = $chipset;
         $this->internalMemory = $internalMemory;
         $this->imei = $imei;
+        echo "+ CREATED " . $this->name . " WITH " . $this->internalMemory . " INTERNAL MEMORY +<br>";
     }
 
     public function runAssemblerApp()
     {
-
+        echo "<br>";
         assemblerApp::showSplashScreen();
         echo "<br>";
         assemblerApp::getData();
         assemblerApp::showData();
+        echo "<br>";
+        assemblerApp::exitApp();
     }
-
-    // methods for getting properties
-    public function getName()
-    {
-        return "---".$this->name."---";
-    }
-
-    public function getChipset()
-    {
-        return $this->chipset;
-    }
-
-    public function getInternalMemory()
-    {
-        return $this->internalMemory;
-    }
-
-    public function getIMEI()
-    {
-        return $this->imei;
-    }
-
-    // method that returns both properties in a string.
-    public function getSpecs()
-    {
-        return $this->name . " includes a " . $this->chipset . " chipset and " . $this->internalMemory . "GB of internal memory";
-    }
-
-    //methods for changing properties
-    public function setInternalMemory($internalMemory)
-    {
-        echo "Changed internal memory from " . $this->internalMemory;
-        $this->internalMemory = $internalMemory;
-        echo " to ".$this->internalMemory;
-    }
-
 }
 
-//When you extend a class, the subclass inherits all of the public and protected methods from the parent class.
 class Blackberry extends Mobile{
     public $keyboard;
 
-    // in php we use __construct to tell our class that this is the constructor method
     public function __construct( $name, $chipset, $internalMemory, $imei, $keyboard )
     {
-        //we use same constructor as father class
         parent::__construct( $name, $chipset, $internalMemory, $imei );
-        // and add new arguments necessary for the new son class
         $this->keyboard = $keyboard;
-    }
-
-    //new method for getting keyboard type
-    public function getKeyboard()
-    {
-        return $this->keyboard;
-    }
-
-    // we override getSpecs in this class
-    public function getSpecs()
-    {
-        return $this->name . " includes a " . $this->chipset . " chipset and " . $this->internalMemory . "GB of internal memory. It uses " . $this->keyboard . " Keyboard";
     }
 }
 
 $blackberry = new BlackBerry('BlackBerry','ARM',1,'99966688555','qwerty');
-
-echo $blackberry->getName();
-
-echo "<pre>";
-var_dump($blackberry);
-echo "</pre>";
-
-echo $blackberry->getChipset();
-echo "<br>";
-echo $blackberry->getKeyboard();
-echo "<br>";
-echo $blackberry->getSpecs();
-echo "<br>";
 echo $blackberry->runAssemblerApp();

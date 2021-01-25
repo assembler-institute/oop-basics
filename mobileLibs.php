@@ -1,5 +1,8 @@
 <?php 
+
+//we set namespace name
 namespace Lib;
+
 
 interface mobileApp {
     // Interfaces cannot have properties
@@ -13,42 +16,35 @@ interface mobileApp {
 //external library interface
 class assemblerApp implements mobileApp{
 
-    const APPSERVER = '132.2.33.4';
-    const APPNAME = 'ASSEMBLER APP LIB';
-
+    const APPNAME = 'LIB APP';
     public static $data;
 
     public static function showSplashScreen()
     {
-        echo "---" . self::APPNAME . "---";
+        echo "@@@ " . self::APPNAME . " @@@";
     }
 
     public static function getData()
     {
-        self::$data = self::APPNAME . " connecting to " . Internet::connectApp(self::APPSERVER);
+        self::$data = self::APPNAME . " " . Internet::connectInternet();
     }
 
     public static function showData()
     {
         echo self::$data;
     }
+
+    public static function  exitApp()
+    {
+        echo "@@@ BYE " . self::APPNAME . " BYE @@@";
+    }
 }
 
 class Internet {
+    const SERVER = '122.23.4.9';
 
     public static function connectInternet()
     {
-        return "connecting to the internet...";
-    }
-
-    public static function connectApp($server)
-    {
-        //we can use constants inside our class with self and double colon
-        return "connecting to " . $server . "...";
-    }
-
-    //self word can be used to call static elements inside the same class
-    public function __construct() {
-        echo self::connectInternet();
+        return "connecting to " . self::SERVER . "...";
     }
 }

@@ -1,29 +1,32 @@
 <?php
-// We have three visibility levels for properties and methods of a class: public, protected, and private.
+//======================================================================
+// ASSEMBLER SCHOOL - PHP Object Oriented Programming
+//======================================================================
+
+/* File 08 - Access modifiers */
+
+// Properties and methods can have access modifiers which control where they can be accessed. 
+// thanks to them we can improve encapsulation to our classes.
 
 class Mobile {
-    public $name;
-    protected $chipset;  //protected elements can be accessed only within the class itself and by inheriting and parent classes.
-    protected $internalMemory;
+    public $name; // public makes sure we can access this properties outside the class.
+    private $chipset; //private elements may only be accessed by the class that defines the member.
+    private $internalMemory;
+    private $imei;
 
-    private $imei; //private elements may only be accessed by the class that defines the member.
-
-    //public elements can be accessed everywhere
-
-    // in php we use __construct to tell our class that this is the constructor method
     public function __construct( $name, $chipset, $internalMemory, $imei )
     {
-        // when we create a constructor we can add arguments and then initialize the properties with those argument values
         $this->name = $name;
         $this->chipset = $chipset;
         $this->internalMemory = $internalMemory;
         $this->imei = $imei;
+        echo "+ " . $this->name . " CREATED +<br>";
     }
 
-    // methods for getting properties
+    // now getters methods meke sense
     public function getName()
     {
-        return "---".$this->name."---";
+        return "--- ".$this->name." ---<br>";
     }
 
     public function getChipset()
@@ -36,23 +39,17 @@ class Mobile {
         return $this->internalMemory;
     }
 
-    public function getIMEI()
+    // protected elements can be accessed only within the class itself and inside inherited classes.
+    protected function getIMEI()
     {
         return $this->imei;
-    }
-
-    // method that returns both properties in a string.
-    public function getSpecs()
-    {
-        return $this->name . " includes a " . $this->chipset . " chipset and " . $this->internalMemory . "GB of internal memory";
     }
 }
 
 //When you extend a class, the subclass inherits all of the public and protected methods from the parent class.
 class Blackberry extends Mobile{
-    public $keyboard;
+    protected $keyboard;
 
-    // in php we use __construct to tell our class that this is the constructor method
     public function __construct( $name, $chipset, $internalMemory, $imei, $keyboard )
     {
         //we use same constructor as father class
@@ -67,44 +64,34 @@ class Blackberry extends Mobile{
         return $this->keyboard;
     }
 
-    // we override getSpecs in this class
-    public function getSpecs()
+    // show protected imei
+    public function showIMEI()
     {
-        return $this->name . " includes a " . $this->chipset . " chipset and " . $this->internalMemory . "GB of internal memory. It uses " . $this->keyboard . " Keyboard";
+        return $this->getIMEI();
     }
 }
 
 $samsung = new Mobile('Samsung s20','Exynos',128,'000111222333');
-
-echo $samsung->getName();
-
-echo "<pre>";
-var_dump($samsung);
-echo "</pre>";
-
-echo $samsung->getIMEI();
-echo "<br>";
-echo $samsung->getSpecs();
-
-echo "<br>";
-echo "<br>";
-
 $blackberry = new BlackBerry('BlackBerry','ARM',1,'99966688555','qwerty');
 
-echo $blackberry->getName();
+//-----------------------------------------------------
+// with this scenario we can't access private or protected
+// attributes or methods via arrow operator
+//-----------------------------------------------------
 
-echo "<pre>";
-var_dump($blackberry);
-echo "</pre>";
+echo "<br>";
+echo $samsung->getName(); // OK | Public method accessing a public property inside the class
+echo "<br>";
+echo $samsung->name; // OK | Public property
+echo "<br>";
+echo $samsung->getChipset(); // OK | Public method accessing a protected property inside the class
+echo "<br>";
+echo $samsung->chipset; // ERROR | Protected property so we can't access outside the class and throws: Fatal error: Uncaught Error: Cannot access protected property Mobile::$chipset
+echo "<br>";
+echo $samsung->getIMEI(); // ERROR | Protected method so we can't call it outside our class and throws: Fatal error: Uncaught Error: Call to protected method Mobile::getIMEI() from context
+echo "<br>";
+echo $samsung->imei; // ERROR | Private property so we can't access outside the class and throws: Fatal error: Uncaught Error: Cannot access private property Mobile::$imei
+echo "<br>";
+echo $blackberry->showIMEI(); // OK | Public method accessing a inherited protected method inside the class
+echo "<br>";
 
-echo $blackberry->getChipset();
-echo "<br>";
-echo $blackberry->getKeyboard();
-echo "<br>";
-echo $blackberry->getSpecs();
-
-//TODO: ejemplos errores al acceder a elementos no publicos
-//with this scenario we can't access private or protected attributes via arrow operator
-echo $samsung->chipset; //ERROR
-//echo $samsung->imei; //ERROR
-echo "<br>";

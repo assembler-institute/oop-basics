@@ -1,18 +1,30 @@
 <?php
-//classes have properties that contain information about that object/class
+//======================================================================
+// ASSEMBLER SCHOOL - PHP Object Oriented Programming
+//======================================================================
+
+/* File 02 - Properties */
+
+// classes have properties that contain information about that object defined by the class
 class Mobile {
-    public $name;
-    public $chipset; // Public makes sure we can access this property outside the class.
+    public $name; // Public makes sure we can access this properties outside the class.
+    public $chipset;
     public $internalMemory;
 }
 
 $modernMobile = new Mobile();
 
-// in OOP we use the arrow operator for accessing properties
+// in OOP and PHP we use the arrow operator ( -> ) for accessing properties
+
 // we can assign those public properties in our class with this syntax
 $modernMobile->name = "Samsung s20";
 $modernMobile->chipset = "Exynos";
 $modernMobile->internalMemory = 128;
+
+echo "<br>";
+
+// we can also access properties value by the arrow operator
+echo $modernMobile->chipset;
 
 // what happens if we assign a non existing value or a wrong value?
 $modernMobile->ramMemory = 1;
@@ -23,11 +35,12 @@ var_dump($modernMobile);
 echo "</pre>";
 
 echo "<br>";
-// we can also access properties value by the arrow operator
-echo $modernMobile->chipset;
-echo "<br>";
 
-// arrow operator is unique in objects and must not be confused with double arrow operator used in arrays
+//-----------------------------------------------------
+// arrow operator is unique in objects and must not be
+// confused with double arrow operator used in arrays
+//-----------------------------------------------------
+
 // this is an example using an array and double arrow operators
 $mobileArray = [
     'name' => 'Xiaomi Mi10',
