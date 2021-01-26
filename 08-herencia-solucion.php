@@ -3,7 +3,7 @@
 // ASSEMBLER SCHOOL - PHP Object Oriented Programming
 //======================================================================
 
-/* File 07 - Inheritance solution */
+/* File 08 - Inheritance solution */
 
 // Let's apply inheritance in latest example
 

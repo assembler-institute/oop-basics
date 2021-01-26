@@ -3,7 +3,7 @@
 // ASSEMBLER SCHOOL - PHP Object Oriented Programming
 //======================================================================
 
-/* File 05 - Constructors & Destructors */
+/* File 06 - Constructors & Destructors */
 
 class Mobile {
     public $name;

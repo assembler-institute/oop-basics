@@ -3,7 +3,7 @@
 // ASSEMBLER SCHOOL - PHP Object Oriented Programming
 //======================================================================
 
-/* File 06 - Why Inheritance?  */
+/* File 07 - Why Inheritance?  */
 
 // Inheritance is another basic principle of OOP
 

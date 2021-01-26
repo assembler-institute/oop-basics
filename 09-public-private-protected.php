@@ -3,7 +3,7 @@
 // ASSEMBLER SCHOOL - PHP Object Oriented Programming
 //======================================================================
 
-/* File 08 - Access modifiers */
+/* File 09 - Access modifiers */
 
 // Properties and methods can have access modifiers which control where they can be accessed. 
 // thanks to them we can improve encapsulation to our classes.

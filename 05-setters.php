@@ -3,7 +3,7 @@
 // ASSEMBLER SCHOOL - PHP Object Oriented Programming
 //======================================================================
 
-/* File 09 - Setters */
+/* File 05 - Setters */
 
 // Setters are methods for modifying properties values
 class Mobile {
