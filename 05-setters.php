@@ -8,24 +8,24 @@
 // Setters are methods for modifying properties values
 class Mobile {
     public $name;
-    private $chipset;
-    private $internalMemory;
-    private $imei;
+    public $chipset;
+    public $internalMemory;
 
-    public function __construct( $name, $chipset, $internalMemory, $imei )
+    public function getName()
     {
-        $this->name = $name;
-        $this->chipset = $chipset;
-        $this->internalMemory = $internalMemory;
-        $this->imei = $imei;
-        echo "+ CREATED " . $this->name . " WITH " . $this->internalMemory . " INTERNAL MEMORY +<br>";
+        return "--- ".$this->name." ---";
+    }
+
+    public function getChipset()
+    {
+        return $this->chipset;
     }
 
     public function getInternalMemory()
     {
         return $this->internalMemory;
     }
-
+    
     // setters are methods for changing properties
     public function setInternalMemory($internalMemory)
     {
@@ -34,12 +34,19 @@ class Mobile {
         echo " to ".$this->internalMemory;
     }
 
-    function __destruct() {
-        echo "- DESTROYED : " . $this->name . " includes a " . $this->chipset . " chipset and " . $this->internalMemory . "GB of internal memory -<br>";
-    }
-
 }
 
-$samsung = new Mobile('Samsung s20','Exynos',128,'000111222333');
-$samsung->setInternalMemory(256);
 echo "<br>";
+
+$modernMobile = new Mobile();
+$modernMobile->name = "Samsung s20";
+$modernMobile->chipset = "Exynos";
+$modernMobile->internalMemory = 128;
+
+
+echo "<br>";
+echo $modernMobile->getInternalMemory();
+echo "<br>";
+$modernMobile->setInternalMemory(256);
+echo "<br>";
+echo $modernMobile->getInternalMemory();
