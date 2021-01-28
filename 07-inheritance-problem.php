@@ -7,7 +7,7 @@
 
 // Inheritance is another basic principle of OOP
 
-class Mobile {
+class Samsung {
     public $name;
     public $chipset;
     public $internalMemory;
@@ -56,7 +56,7 @@ class Blackberry {
     }
 }
 
-$samsung = new Mobile('Samsung s20','Exynos',128);
+$samsung = new Samsung('Samsung s20','Exynos',128);
 $blackberry = new BlackBerry('BlackBerry','ARM',1, 'qwerty');
 echo "<br>";
 

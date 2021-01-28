@@ -7,6 +7,8 @@
 
 // static methods can be called without creating an instance of the class and are declared with the static keyword
 class Internet {
+public static $company = "orange";
+
     public static function connectInternet()
     {
         return "connecting to the internet...";
@@ -40,9 +42,11 @@ class Mobile {
     }
 }
 
-// we can instantiate classes with static methods
+// we can acces to static properties without instanciating the class
 echo "<br>";
-$internet = new Internet();
+$company = Internet::$company;
+
+echo $company;
 echo "<br><br>";
 
 
