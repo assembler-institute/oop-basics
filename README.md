@@ -118,7 +118,15 @@ Abstract classes and methods are when the parent class has a named method, but n
 Interfaces allow you to specify what methods a class should implement.
 Interfaces make it easy to use a variety of different classes in the same way. When one or more classes use the same interface, it is referred to as "polymorphism". In this file you will learn how to create and extend interfaces.
 
-### [14 - Namespaces](14-namespaces.php) <!-- omit in toc -->
+### [14 - Overriding](14-overriding.php) <!-- omit in toc -->
+
+In function overriding, both parent and child classes should have same function name with and number of arguments. In this file you will learn how to implement overriding.
+
+### [15 - Overloading](15-overloading.php) <!-- omit in toc -->
+
+Function overloading contains same function name and that function preforms different task according to number of arguments. In this file you will learn how to implement overloading.
+
+### [16 - Namespaces](16-namespaces.php) <!-- omit in toc -->
 
 Namespaces are qualifiers that solve two different problems:
 
