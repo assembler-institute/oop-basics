@@ -5,7 +5,6 @@
 
 /* File 14 - Overriding */
 
-// Function overriding is same as other OOPs programming languages.
 // In function overriding, both parent and child classes should have
 // same function name with and number of arguments. It is used to replace
 // parent method in child class. The purpose of overriding is to change
