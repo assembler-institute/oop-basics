@@ -6,7 +6,8 @@
 /* File 04 - Getters */
 
 // Encapsulation is one of the principles in OOP, we use getters methods in order to keep information safe.
-class Mobile {
+class Mobile
+{
     public $name;
     public $chipset;
     public $internalMemory;
@@ -14,7 +15,7 @@ class Mobile {
     // methods for getting properties
     public function getName()
     {
-        return "--- ".$this->name." ---";
+        return "--- " . $this->name . " ---";
     }
 
     public function getChipset()
@@ -26,7 +27,6 @@ class Mobile {
     {
         return $this->internalMemory;
     }
-
 }
 
 

@@ -6,8 +6,9 @@
 /* File 10 - Static Methods */
 
 // static methods can be called without creating an instance of the class and are declared with the static keyword
-class Internet {
-public static $company = "orange";
+class Internet
+{
+    public static $company = "orange";
 
     public static function connectInternet()
     {
@@ -15,18 +16,20 @@ public static $company = "orange";
     }
 
     // self word must be used to call static elements inside the same class
-    public function __construct() {
+    public function __construct()
+    {
         echo self::connectInternet();
     }
 }
 
-class Mobile {
+class Mobile
+{
     public $name;
     protected $chipset;
     protected $internalMemory;
     private $imei;
 
-    public function __construct( $name, $chipset, $internalMemory, $imei )
+    public function __construct($name, $chipset, $internalMemory, $imei)
     {
         $this->name = $name;
         $this->chipset = $chipset;
@@ -38,7 +41,7 @@ class Mobile {
     public function connectMobileInternet()
     {
         // we can call static methods without instantiating directly with class name and double colon
-        return $this->name . " : " .Internet::connectInternet();
+        return $this->name . " : " . Internet::connectInternet();
     }
 }
 
@@ -50,5 +53,5 @@ echo $company;
 echo "<br><br>";
 
 
-$samsung = new Mobile('Samsung s20','Exynos',128,'000111222333');
+$samsung = new Mobile('Samsung s20', 'Exynos', 128, '000111222333');
 echo $samsung->connectMobileInternet();

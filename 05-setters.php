@@ -6,7 +6,8 @@
 /* File 05 - Setters */
 
 // Setters are methods for modifying properties values
-class Mobile {
+class Mobile
+{
     public $name;
     public $chipset;
     public $internalMemory;
@@ -15,15 +16,14 @@ class Mobile {
     {
         return $this->internalMemory;
     }
-    
+
     // setters are methods for changing properties
     public function setInternalMemory($internalMemory)
     {
         echo "* CHANGED internal memory from " . $this->internalMemory;
         $this->internalMemory = $internalMemory;
-        echo " to ".$this->internalMemory;
+        echo " to " . $this->internalMemory;
     }
-
 }
 
 echo "<br>";

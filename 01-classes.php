@@ -6,7 +6,9 @@
 /* File 01 - Classes */
 
 // To create classes we use reserved word class.
-class Mobile {}
+class Mobile
+{
+}
 
 // We can instantitate classes like this
 $modernMobile = new Mobile();
@@ -17,5 +19,3 @@ $oldMobile = new Mobile();
 var_dump($modernMobile);
 echo "<br>";
 var_dump($oldMobile);
-
-

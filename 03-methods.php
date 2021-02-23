@@ -6,7 +6,8 @@
 /* File 03 - Properties */
 
 // in a class we have properties and methods. This methods act like functions and allow classes to develop tasks and functionalities.
-class Mobile {
+class Mobile
+{
     public $name;
     public $chipset;
     public $internalMemory;
@@ -25,4 +26,3 @@ $modernMobile->chipset = "Exynos";
 $modernMobile->internalMemory = 128;
 
 echo $modernMobile->showSpecs();
-

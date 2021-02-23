@@ -8,7 +8,8 @@
 // constants are unchangeable, we can use the word const to create them. The default visibility of class constants is public.
 const APPNAME = 'ASSEMBLER APP';
 
-class Internet {
+class Internet
+{
     const SERVER = '122.23.4.5';
 
     public static function connectInternet()
@@ -18,13 +19,14 @@ class Internet {
     }
 }
 
-class Mobile {
+class Mobile
+{
     public $name;
     protected $chipset;
     protected $internalMemory;
     private $imei;
 
-    public function __construct( $name, $chipset, $internalMemory, $imei )
+    public function __construct($name, $chipset, $internalMemory, $imei)
     {
         $this->name = $name;
         $this->chipset = $chipset;
@@ -40,5 +42,5 @@ class Mobile {
     }
 }
 
-$samsung = new Mobile('Samsung s20','Exynos',128,'000111222333');
+$samsung = new Mobile('Samsung s20', 'Exynos', 128, '000111222333');
 echo $samsung->runMobileApp();

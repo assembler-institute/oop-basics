@@ -8,13 +8,14 @@
 // Properties and methods can have access modifiers which control where they can be accessed. 
 // thanks to them we can improve encapsulation to our classes.
 
-class Mobile {
+class Mobile
+{
     public $name; // public makes sure we can access this properties outside the class.
     private $chipset; // private elements may only be accessed by the class that defines the member.
     private $internalMemory;
     private $imei;
 
-    public function __construct( $name, $chipset, $internalMemory, $imei )
+    public function __construct($name, $chipset, $internalMemory, $imei)
     {
         $this->name = $name;
         $this->chipset = $chipset;
@@ -26,7 +27,7 @@ class Mobile {
     // now getters methods meke more sense because we won't be able to access properties outside the class
     public function getName()
     {
-        return "--- ".$this->name." ---<br>";
+        return "--- " . $this->name . " ---<br>";
     }
 
     public function getChipset()
@@ -46,12 +47,13 @@ class Mobile {
     }
 }
 
-class Blackberry extends Mobile{
+class Blackberry extends Mobile
+{
     protected $keyboard;
 
-    public function __construct( $name, $chipset, $internalMemory, $imei, $keyboard )
+    public function __construct($name, $chipset, $internalMemory, $imei, $keyboard)
     {
-        parent::__construct( $name, $chipset, $internalMemory, $imei );
+        parent::__construct($name, $chipset, $internalMemory, $imei);
         $this->keyboard = $keyboard;
     }
 
@@ -62,8 +64,8 @@ class Blackberry extends Mobile{
     }
 }
 
-$samsung = new Mobile('Samsung s20','Exynos',128,'000111222333');
-$blackberry = new BlackBerry('BlackBerry','ARM',1,'99966688555','qwerty');
+$samsung = new Mobile('Samsung s20', 'Exynos', 128, '000111222333');
+$blackberry = new BlackBerry('BlackBerry', 'ARM', 1, '99966688555', 'qwerty');
 
 //-----------------------------------------------------
 // with this scenario we can't access private or protected
@@ -85,4 +87,3 @@ echo $samsung->imei; // ERROR | Private property so we can't access outside the 
 echo "<br>";
 echo $blackberry->showIMEI(); // OK | Public method accessing a inherited protected method inside the class
 echo "<br>";
-

@@ -5,13 +5,14 @@
 
 /* File 06 - Constructors & Destructors */
 
-class Mobile {
+class Mobile
+{
     public $name;
     public $chipset;
     public $internalMemory;
 
     // in PHP we use __construct to tell our class that this is the constructor method, it will be called automatically when an object of this class is created
-    public function __construct( $name, $chipset, $internalMemory )
+    public function __construct($name, $chipset, $internalMemory)
     {
         // when we create a constructor we can add arguments and then initialize the properties with those argument values
         $this->name = $name;
@@ -21,12 +22,13 @@ class Mobile {
     }
 
     // PHP will call __destruct at the end of the script, when the object is destructed or the script is stopped or exited.
-    function __destruct() {
+    function __destruct()
+    {
         echo "- DESTROYED : " . $this->name . " includes a " . $this->chipset . " chipset and " . $this->internalMemory . "GB of internal memory -<br>";
     }
 }
 
 // Now we can instantiate a mobile object passing arguments in the correct order
-$modernMobile = new Mobile('Samsung s20','Exynos',128);
-$oldMobile = new Mobile('BlackBerry','ARM',1);
+$modernMobile = new Mobile('Samsung s20', 'Exynos', 128);
+$oldMobile = new Mobile('BlackBerry', 'ARM', 1);
 echo "<br>";
