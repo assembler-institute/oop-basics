@@ -5,7 +5,7 @@
 
 /* File 14 - Overloading */
 
-// Function overloading contains same function name and that function preforms
+// Function overloading contains same function name and that function performs
 // different task according to number of arguments. Like other OOP languages
 // function overloading can not be done by native approach.
 // In PHP function overloading is done with the help of magic function __call().
