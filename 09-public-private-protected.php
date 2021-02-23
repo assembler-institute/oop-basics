@@ -12,7 +12,7 @@ class Mobile
 {
     public $name; // public makes sure we can access this properties outside the class.
     private $chipset; // private elements may only be accessed by the class that defines the member.
-    private $internalMemory;
+    protected $internalMemory;
     private $imei;
 
     public function __construct($name, $chipset, $internalMemory, $imei)
@@ -49,7 +49,7 @@ class Mobile
 
 class Blackberry extends Mobile
 {
-    protected $keyboard;
+    private $keyboard;
 
     public function __construct($name, $chipset, $internalMemory, $imei, $keyboard)
     {
@@ -79,11 +79,15 @@ echo $samsung->name; // OK | Public property
 echo "<br>";
 echo $samsung->getChipset(); // OK | Public method accessing a protected property inside the class
 echo "<br>";
-echo $samsung->chipset; // ERROR | Protected property so we can't access outside the class and throws: Fatal error: Uncaught Error: Cannot access protected property Mobile::$chipset
+echo $samsung->chipset; // ERROR | Private property so we can't access outside the class and throws: Fatal error: Uncaught Error: Cannot access privated property Mobile::$chipset
 echo "<br>";
 echo $samsung->getIMEI(); // ERROR | Protected method so we can't call it outside our class and throws: Fatal error: Uncaught Error: Call to protected method Mobile::getIMEI() from context
 echo "<br>";
 echo $samsung->imei; // ERROR | Private property so we can't access outside the class and throws: Fatal error: Uncaught Error: Cannot access private property Mobile::$imei
 echo "<br>";
 echo $blackberry->showIMEI(); // OK | Public method accessing a inherited protected method inside the class
+echo "<br>";
+echo $blackberry->getInternalMemory(); // OK | Public method accessing a inherited protected method inside the class
+echo "<br>";
+echo $blackberry->internalMemory; // Uncaught Error: Cannot access protected property Blackberry::$internalMemory
 echo "<br>";
