@@ -36,7 +36,7 @@ class iPhone
 // When you extend a class, the subclass inherits all of the public and protected methods from the parent class.
 class iPhonePlus extends iPhone
 {
-    //Here we are overriding this method adding extra features that the previos "getName" doesn't have.
+    //Here we are overriding this method adding extra features that the previous "getName" doesn't have.
     public function getName()
     {
         return "¡The name of this iPhone is $this->name!";
