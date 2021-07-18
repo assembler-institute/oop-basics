@@ -6,9 +6,9 @@ class Tablet extends Device
 {
     public string $book;
 
-    public function __construct($serialNumber, $color, $book)
+    public function __construct($serialNumber, $name, $color, $book)
     {
-        parent::__construct($serialNumber, $color);
+        parent::__construct($serialNumber, $name, $color);
         $this->book = $book;
     }
 
@@ -20,5 +20,15 @@ class Tablet extends Device
     public function readBook(): string
     {
         return "Reading $this->book";
+    }
+
+    /**
+     * @param int $deviceId
+     * @return 
+     * @author 
+     */
+    public function getDetail($deviceId): string
+    {
+        return "The tablet name is: $this->name";
     }
 }
