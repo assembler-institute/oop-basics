@@ -20,7 +20,7 @@
 
 ## Starting 🚀
 
-This is just an example of how OOP works. Here I have implemented everything necessary to create a class called Device, I extend it on the Mobile and Tablet classes and implement a few methods to get their Id, brand, model, screen size and serial number. Then I've created the interface and a class where I implement that interface and an example by instanciating the two main classes. So if you run the pill.php file on a local server environment, you'll see the result of those properties and methods.
+This is just an example of how OOP works. Here I have implemented everything necessary to create an abstract class called Device, I extend it on the Mobile and Tablet classes and implement a few methods to get their Id, brand, model, screen size and serial number. Then I've created the interface and a class where I implement that interface and an example by instanciating the two main classes. So if you run the pill folder's index.php file on a local server environment, you'll see the result of those properties and methods.
 
 ## Theory 📚
 
@@ -123,6 +123,7 @@ To run this project you need yo have a local server environment installed in you
 ## Tools and tecnologies used 🛠️
 
 - PHP
+- HTML
 
 ## Project requirements 📏
 

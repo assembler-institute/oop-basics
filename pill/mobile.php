@@ -1,19 +1,12 @@
 <?php
 
 require_once 'device.php';
-
 class Mobile extends Device {
-  function __construct(
-    string $id,
-    string $brand, 
-    string $model, 
-    string $screenSize, 
-    string $serialNumber) {
-      $this->id = $id;
-      $this->brand = $brand;
-      $this->model = $model;
+  public $screenSize;
+
+  function __construct($id, $serialNumber, $brand, $model, $screenSize) {
+    parent::__construct($id, $serialNumber, $brand, $model);
       $this->screenSize = $screenSize;
-      $this->serialNumber = $serialNumber;
   }
 
   public function getScreenSize():string {

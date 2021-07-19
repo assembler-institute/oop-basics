@@ -6,6 +6,13 @@ abstract class Device {
   protected $brand;
   protected $model;
 
+  public function __construct($id, $serialNumber, $brand, $model) {
+    $this->id = $id;
+    $this->serialNumber = $serialNumber;
+    $this->brand = $brand;
+    $this->model = $model;
+  }
+
   public function getId():string {
     return $this->id;
   }

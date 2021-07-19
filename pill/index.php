@@ -1,13 +1,14 @@
 <?php
 
 require_once 'deviceManager.php';
+require_once 'device.php';
 require_once 'mobile.php';
 require_once 'tablet.php';
 
-$iphone6 = new Mobile('M1', 'Apple', 'iPhone 6s', '499', 'U7lhSos23Xjg5BNP');
-$iphone6Plus = new Mobile('M1plus', 'Apple', 'iPhone 6 Plus', '550', 'F9ihFid78Xju8FLW');
+$iphone6 = new Mobile('M1', 'U7lhSos23Xjg5BNP', 'Apple', 'iPhone 6s', '499');
+$iphone6Plus = new Mobile('M1plus', 'F9ihFid78Xju8FLW', 'Apple', 'iPhone 6 Plus', '550' );
 
-$tablet = new Tablet('T1', 'Apple', 'iPad Pro',  '879', '7PbcvqlP3fOWgpPe');
+$tablet = new Tablet('T1', '7PbcvqlP3fOWgpPe', 'Apple', 'iPad Pro',  '879');
 
 $deviceManager = new DeviceManager();
 $memoryRepository = new MemoryRepository();
