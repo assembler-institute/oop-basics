@@ -1,18 +1,18 @@
 `#php` `#oop` `#master-in-software-engineering`
 
-# Assembler School: OOP Basics with PHP <!-- omit in toc -->
+# OOP Basics with PHP <!-- omit in toc -->
 
 In this project you will learn the basics of OOP using mobile devices as a reference. In the _"Project files"_ section you will find a description of the content to be displayed in each file.
 
 ## Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Getting Started](#getting-started)
-- [Dependencies](#dependencies)
-- [Tools](#tools)
-- [OOP Introduction](#oop-introduction)
+- [1. Getting Started](#1-getting-started)
+- [2. Dependencies](#2-dependencies)
+- [3. Tools](#3-tools)
+- [✍️ Author](#️-author)
 
-## Getting Started
+## 1. Getting Started
 
 ### The repo <!-- omit in toc -->
 
@@ -23,7 +23,7 @@ $ git clone https://github.com/solaz0824/oop-basics.git
 ```
 
 
-## Dependencies
+## 2. Dependencies
 
 Before we can get started you will need to make sure that all the necessary dependencies are installed in your system.
 
@@ -37,7 +37,7 @@ To verify that you have installed it correctly, you can run the following comman
 $ php -version
 ```
 
-## Tools
+## 3. Tools
 
 In the event that you prefer to use a tool that installs everything you need to configure and run a PHP server, we recommend using [XAMPP](https://www.apachefriends.org/es/download.html)
 
@@ -51,7 +51,8 @@ Once downloaded and installed, in the case that the Windows operating system you
 
 
 
-## OOP Introduction
 
-Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects", which can contain data and code: data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods).
 
+
+## ✍️ Author
+ [@solaz0824](https://github.com/solaz0824) 
