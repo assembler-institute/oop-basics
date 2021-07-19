@@ -1,4 +1,60 @@
 `#php` `#oop` `#master-in-software-engineering`
+# ¿Que es el OOP?
+### Es un paradigma de programación que se basa en la practica de combinar  funcioniones y variables relacionadas , combirtiendolas en una sola unidad.
+
+
+# ¿Que es una classe?
+### Estas unidades son lo que llamamos una classe, es donde encapsulamos una serie de funciones y variables.
+
+# ¿Que es un Objeto?
+### El objeto es el elemento que surge cuando se le da un valor concreto  a las funciones y variables de esa clase. Entonces podemos concluir que una classe es la abstracción de un objeto, o también , la classe es el molde del cual se forma el objeto.
+
+# ¿Que es una instancia?
+### La instancia , es la asignación de tal objeto a un espacio de memoria, el cual nos va a permitir a acceder a métodos y propiedades de la classe de la que proviene el objeto.
+
+# ¿Que es una propiedad?
+ 
+### las propiedades son las variables encapsuladas en la classe(veasé pregunta 1 )
+
+# ¿Que es un método?
+### Los métodos son las funciones que están encapsuladas en la classe.
+(veasé pregunta 1 )
+
+# Diferencia funcion y metodo:
+### Una función es una unidad que encapsula instrucciones (acciones), igual que un método.Los métodos son las funciones(acciones),que se encapsula en nuestra classe.
+
+# ENCAPSULACIÓN 
+### Es la práctica de agrupar propiedades y métodos de un objeto, para que solo se puedan modificar  dentro. ocultas los “miembros de la classe”.Se crea un scope determinado dependiendo de los modificadores de acceso, que son keyWords(Public, private, protected),
+
+# ABSTRACTIÓN 
+### esconde toda la información que no resulta relevante y que solo va a usarse dentro del objeto donde se declara.
+
+# INHERITANCE
+### Es la capacidad de una classe de recibir métodos y propiedades de otra classe, a esta última nos referiremos como a la classe padre. como hemos explicado más arriba llamaremos al constructor de la classe padre para heredar sus atributos
+
+# POLYMORPHISM
+### Es la capadcidad del objeto de ser modificado y de adoptar formas determinadas.
+
+# Overload
+### Otra forma de polymorphismo es “Overload” con el método overloading podemos redefinir los parámetros de un método existente, manteniendo el nombre de dicho método, y sin la necesidad de heredar.
+
+# Overload
+### Overriding un metododo consiste en crear una subclase donde heredas el metodo de la classe padre ,para modificar tal metodo.
+
+# Diference Overload Overload:
+### necessita heredar el método para incidir en él por lo tanto actúa siempre dentro de su scope, Overload puede acceder a los métodos desde cualquier lugar sin necesidad de heredar. Esta es la diferencia principal que provoca otras derivadas, como que Override debe tener el mismo typado que el método que sobre escribe, los mismos parámetros.a diferencia de Overload.
+
+# Static class:
+### cuando una classe o un método es static , este puede ser llamado sin necesidad de crear una instancia.Pongamos el caso,  de una subclasse statica dentro de una classe, esta subclasse al ser “static” podrá ser llamada sin necesidad de instanciar a su classe padre, de lo contrario sería necesario hacer una instancia de su classe padre, lo mismo ocurre con los métodos.Esta práctica nos ahorra el uso innecesario de memoria en , ya que cuando instancias una classe , estamos almacenando toda la classe, con el uso de static , requerimos solo lo necesario.
+
+# Ventajas:
+### Una de las principales ventajas y el sentido de la  oop es su capacidad de modular. Permite la división de problemas en pequeñas partes.Programar bajo este paradigma exige un orden en la escritura del código, un formato que es universal, una exigencia de definir tapados, por ejemplo..Se puede ahorrar bastante código gracias a la aplicación de conceptos como la herencia y el poliymorfismo. Conceptos como la encapsulación, hacen de un código escrito bajo este paradigma que sea reutilizable, ya que agrupa una serie atributos y acciones bajo un mismo nombre identificativo.y mediante la abstracción se simplifica la lectura para terceros.
+
+# Desventajas:
+### Para tareas fáciles, no es recomendable trabajar bajo este paradigmas, ya que la complejidad que exige solo no sale cuenta.Por ejemplo para webs solo de lectura o informativas , donde haya poca interactividad y poco flujo de datos..Trabajar con poo implica una curva de aprendizaje bastante pronunciada para programadores iniciados.Los procesos de ejecución pueden demorarse más, que con la clásica programación estructurada.Estas unidades se llaman objetos, la variables, propiedades y las funciones métodos.-esto define uno de los pilares que sostienen poo, la encapsularon-otro pilar es la Abstracción, es la par chica de esconder ciertos componentes del objeto de forma de que estos solo existan dentro de tal objeto-inherit to eliminante renundant code.
+
+
+
 
 # Assembler School: OOP Basics with PHP <!-- omit in toc -->
 
@@ -134,3 +190,6 @@ Namespaces are qualifiers that solve two different problems:
 2. They allow the same name to be used for more than one class
 
 In this file you will learn how to create and use namespaces.
+
+
+
