@@ -1,0 +1,25 @@
+● What is object-oriented programming in general terms?
+● What is a class?
+● What is an object?
+● What is an instance?
+● What is a property?
+● What is a method?
+● What is the difference between a function and a method?
+● What is a constructor?
+● What is the difference between a class, an object and an instance?
+● What do we understand about the concept of encapsulation?
+- Encapsulation solves it implementation level.
+- Encapsulation means binding the code and data into a single unit.
+- Encapsulation means hiding the internal details or mechanics of how an object does something for security reasons.
+● What do we understand about the concept of abstraction?
+- Abstraction in Object Oriented Programming solves the issues at the design level.
+- Abstraction in Programming is about hiding unwanted details while showing most essential information.
+● What do we understand about the concept of inheritance?
+● What do we understand about the concept of polymorphism?
+● What do we understand about the concept of Overload?
+● What do we understand about the concept of Override?
+● What differences exist between the concept of Overload and Override?
+● What is a static class?
+● Look for 3 advantages over object-oriented programming compared to other
+programming paradigms
+● Look for disadvantages of this paradigm.
