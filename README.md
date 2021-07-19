@@ -107,9 +107,11 @@ Object-oriented programming (OOP) is a programming paradigm based on the concept
 * What is a static class?
 > Class that is not meant to have any object instanced of it. Static classes are meant to store some properties and methods and have them called using the class name.
 * Look for 3 advantages over object-oriented programming compared to other programming paradigms
-> hello
+>  1. **Modularity**: ability to divide in modules in a very accurate and practical way using classes.
+> 2. **Reusability**: ability to reuse units of code. This can be done through different means such as inheritance and polymorphism.
+> 3. **Safety**: ability to limit the access to class attributes and methods using visibility keywords (private, protected and public).
 * Look for disadvantages of this paradigm.
-> hello
+> Not recommended if the problem to solve is quite simple due to the complexity that using the paradigm entails.
 > 
 ## Project files
 
