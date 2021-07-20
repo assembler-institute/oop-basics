@@ -1,0 +1,75 @@
+● What is object-oriented programming in general terms?
+OOP, 
+A programming approach based on objects and classes.
+
+● What is a class?
+An extensible program-code-template for creating objects, providing initial values for state (member variables) and implementations of behavior (member functions or methods).
+
+● What is an object?
+A member or an "instance" of a class. An object has a state in which all of its properties have values that you either explicitly define or that are defined by default settings.
+
+● What is an instance?
+A concrete occurrence of any object, existing usually during the runtime of a computer program. Formally, "instance" is synonymous with "object" as they are each a particular value (realization), and these may be called an instance object; "instance" emphasizes the distinct identity of the object. The creation of an instance is called instantiation.
+
+● What is a property?
+Variables inside a class. Properties can accept values like strings, integers, and booleans (true/false values), like any other variable. 
+
+● What is a method?
+A function inside a class is called a method.
+
+● What is the difference between a function and a method?
+Method - A method is a function that has a defined receiver, in OOP terms, a method is a function on an instance of an object. 
+Function - A function in an independent piece of code which includes some logic and must be called independently and are defined outside of class.
+
+● What is a constructor?
+A constructor (abbreviation: ctor) is a special type of subroutine called to create an object. It prepares the new object for use, often accepting arguments that the constructor uses to set required member variables.
+
+● What is the difference between a class, an object and an instance?
+A class is like a blueprint for an object. It isn’t the object itself, just its specification.
+An instance is an actual object built from the blueprint. It has a physical presence in memory and can be called upon to do work.
+Object is a loose term that can mean class or instance depending on context, but typically means an instance. But often developers use ‘object’ to mean class at times, and that’s usually understood.
+
+● What do we understand about the concept of encapsulation?
+- Encapsulation solves it implementation level.
+- Encapsulation means binding the code and data into a single unit.
+- Encapsulation means hiding the internal details or mechanics of how an object does something for security reasons.
+
+● What do we understand about the concept of abstraction?
+- Abstraction in Object Oriented Programming solves the issues at the design level.
+- Abstraction in Programming is about hiding unwanted details while showing most essential information.
+
+● What do we understand about the concept of inheritance?
+Inheritance is an OOP technique that allows one class to inherit the attributes and methods of another class. In an inheritance relationship, the parent class can also be referred to as the superclass or base class. The child class can be referred to as the subclass or derived class.
+
+● What do we understand about the concept of polymorphism?
+Polymorphism is the ability of the system to process objects differently depending on their data type or class.
+
+● What do we understand about the concept of Overload?
+A method simply means two or more methods have the same method name with different arguments or parameters(compulsory) and return type(not necessary).
+
+● What do we understand about the concept of Override?
+A method simply means that a subclass redefines its inherited method(s) when it needs to change or extend the behavior of that method.
+Rules for Override
+1. Arguments or parameters of the method in both superclass and subclass must be the same i.e same type and numbers of arguments.
+2. You cannot assign weaker access privilege to overridden methods. i.e You can’t override a public method and make it private.
+
+
+● What differences exist between the concept of Overload and Override?
+Overloading occurs when two or more methods in one class have the same method name but different parameters.
+Overriding occurs when two methods have the same method name and parameters. One of the methods is in the parent class, and the other is in the child class. Overriding allows a child class to provide the specific implementation of a method that is already present in its parent class.​
+
+● What is a static class?
+Use a static class as a unit of organization for methods not associated with particular objects. Also, a static class can make your implementation simpler and faster because you do not have to create an object in order to call its methods.
+
+● Look for 3 advantages over object-oriented programming compared to other programming paradigms
+OOP provides a clear modular structure for programs which makes it good for defining abstract data types where implementation details are hidden and the unit has a clearly defined interface. OOP makes it easy to maintain and modify existing code as new objects can be created with small differences to existing ones.
+
+● Look for disadvantages of this paradigm.
+Size:
+Object Oriented Programs are much larger than other programs.
+
+Effort:
+Object Oriented Programs require a lot of work to create.
+
+Speed:
+Object Oriented Programs are slower than other programs, because of their size.
