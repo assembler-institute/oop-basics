@@ -2,135 +2,334 @@
 
 # Assembler School: OOP Basics with PHP <!-- omit in toc -->
 
-In this project you will learn the basics of OOP using mobile devices as a reference. In the _"Project files"_ section you will find a description of the content to be displayed in each file.
+In this project we created PHP OOP logic with diferent types of Classes using mobile devices as a reference.
 
-## Table of contents
+In the _"exampels"_ folder you will find exampels of PHP OOP clases and functionality.
+In the _"exercices"_ folder you will find the files with the Classes and functions.
+<br/>
+<br/>
 
-- [Table of contents](#table-of-contents)
-- [Getting Started](#getting-started)
-- [Dependencies](#dependencies)
-- [Tools](#tools)
-- [OOP Introduction](#oop-introduction)
-- [Project files](#project-files)
+# Questions
 
-## Getting Started
+What is object-oriented programming in general terms?
 
-### The repo <!-- omit in toc -->
+```
+Object-oriented programming (OOP) is a computer programming model that organizes
+software design around data, or objects, rather than functions and logic. An object
+can be defined as a data field that has unique attributes and behavior.
 
-First, you will need to clone the repo:
-
-```bash
-$ git clone https://github.com/assembler-school/oop-basics.git
+OOP focuses on the objects that developers want to manipulate rather than the
+logic required to manipulate them.
 ```
 
-### Presentation material <!-- omit in toc -->
+What is a class?
 
-- [Slides](https://docs.google.com/presentation/d/1cZxutGPDqUGsLWLVen_ATjd7dEkeoPS_v_fy1y0C5Co/edit?usp=sharing)
+```
+In object-oriented programming, a class is a blueprint for creating objects
+(a particular data structure), providing initial values for state
+(member variables or attributes), and implementations of behavior
+(member functions or methods).
 
-## Dependencies
-
-Before we can get started you will need to make sure that all the necessary dependencies are installed in your system.
-
-### PHP <!-- omit in toc -->
-
-You can install it by following the instructions [in the official docs](https://www.php.net/downloads) (we recommend that you install the version that is named _Current_).
-
-To verify that you have installed it correctly, you can run the following command from the terminal that should output the version installed:
-
-```bash
-$ php -version
+The user-defined objects are created using the class keyword. The class is a
+blueprint that defines a nature of a future object. An instance is a specific
+object created from a particular class. Classes are used to create and manage
+new objects and support inheritance—a key ingredient in object-oriented programming
+and a mechanism of reusing code.
 ```
 
-## Tools
+What is an object?
 
-In the event that you prefer to use a tool that installs everything you need to configure and run a PHP server, we recommend using [XAMPP](https://www.apachefriends.org/es/download.html)
+```
+ An Object is an individual instance of the data structure defined by a class.
+ We define a class once and then make many objects that belong to it. Objects
+ are also known as instances.
+```
 
-### XAMPP <!-- omit in toc -->
+What is an instance?
 
-XAMPP is a completely free and easy to install Apache distribution that contains MariaDB, PHP, and Perl. The XAMPP installation package has been designed to be incredibly easy to install and use.
+```
+An instance is a concrete occurrence of any object, existing usually during the
+runtime of a computer program. Formally, "instance" is synonymous with "object"
+as they are each a particular value (realization), and these may be called an
+instance object; "instance" emphasizes the distinct identity of the object.
+The creation of an instance is called instantiation.
+```
 
-<img src='./assets/img/xampp-homepage.png' width='600' alt='xampp homepage'>
+What is a property?
 
-You have to go to the [download page](https://www.apachefriends.org/es/download.html) and it will automatically recommend installing the latest version available.
+```
+Properties are as in everyday language and technically are fields of objects/classes
+with dedicated getter/setter routines (which can be considered as methods).
+```
 
-<img src='./assets/img/xampp-download.png' width='600' alt='xampp download'>
+What is a method?
 
-Once downloaded and installed, in the case that the Windows operating system you will see the following screen, in which you will only have to start the Apache service.
+```
+Methods ("member functions") are similar to functions, they belongs to classes or
+objects and usually expresses the verbs of the objects/class. For example, an object
+ of type Window usually would have methods open and close which do corresponding
+ operations to the object they belong.
+```
 
-<img src='./assets/img/xampp-app.png' width='600' alt='xampp app'>
+What is the difference between a function and a method?
 
-## OOP Introduction
+```
+A method, like a function, is a set of instructions that perform a task.
+The difference is that a method is associated with an object, while a function is not.
 
-Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects", which can contain data and code: data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods).
+```
 
-## Project files
+What is a constructor?
 
-### [01 - Classes](./01-classes.php) <!-- omit in toc -->
+```
+A constructor is a special method used to initialize objects.
+we use constructors to initialize all variables in the class
+when an object is created. As and when an object
+is created it is initialized automatically passing the data to
+the constructor parameters.
+```
 
-The OOP paradigm encapsulates concepts of the real world in what is called as Classes which create Objects. In this file you will learn how to create a class and instanciate it.
+What is the difference between a class, an object and an instance?
 
-### [02 - Properties](02-properties.php) <!-- omit in toc -->
+```
+The Class is a “template” / “blueprint” that is used to create objects.
+Real world objects shares 2 main characteristics, state and behavior. Human
+have state (name, age) and behavior (running, sleeping). They consist of state
+and related behavior wiche is given by the Class. An instance is a unique
+copy of a Class that representing an Object, wiche is given by the constructor
+of the class Object. When a new instance of a class is created, the proccesing
+engine will allocate a room of memory for that class instance.
 
-Class member variables are called properties. In this file, you will learn how to add properties to a class and get them when the class is instantiated.
+```
 
-### [03 - Methods](03-methods.php) <!-- omit in toc -->
+What do we understand about the concept of encapsulation?
 
-Properties define the characteristics of an object and the methods (functions in a class are called methods) which define the behavior of the Class. In this file you will learn how to create methods inside a class.
+```
+Encapsulation is one of the fundamentals of OOP (object-oriented programming).
+It refers to the bundling of data with the methods that operate on that data.
+Encapsulation is used to hide the values or state of a structured data object
+inside a class, preventing unauthorized parties’ direct access to them
+```
 
-### [04 - Getters](04-getters.php) <!-- omit in toc -->
+What do we understand about the concept of abstraction?
 
-The get method returns the attribute value, usually there is a get method for each attribute of the class. In this file you will learn how to create **getter** methods.
+```
+Abstraction is one of the key concepts of object-oriented programming (OOP)
+languages. Its main goal is to handle complexity by hiding unnecessary details
+from the user. That enables the user to implement more complex logic on top of
+the provided abstraction without understanding or even thinking about all the
+hidden complexity.
+```
 
-### [05 - Setters](05-setters.php) <!-- omit in toc -->
+What do we understand about the concept of inheritance?
 
-The set method sets the attribute value, usually there is a get method for each attribute of the class. In this file you will learn how to create **setter** methods.
+```
+it is used to define relationship between two class,
+which a child class occurs all the properties and
+behaviours of a parent class.
+Provides code reusability. We can implement by using
+extend keyword
+```
 
-### [06 - Constructors](06-constructors.php) <!-- omit in toc -->
+What do we understand about the concept of polymorphism?
 
-A constructor allows you to initialize an object's properties upon creation of the object. In this file you will learn how to create the constructor method.
+```
+Polymorphism is the method in an object-oriented programming language that
+performs different things as per the object's class, which calls it. With Polymorphism,
+a message is sent to multiple class objects, and every object responds appropriately
+according to the properties of the class.
+```
 
-### [07 - Inheritance problem](07-inheritance-problem.php) <!-- omit in toc -->
+What do we understand about the concept of Overload?
 
-There are several disadvantages of not applying inheritance in our code. In this file you will lean what's the problem if you don't apply any inheritance in your code.
+```
+AnswerOverloading happens when you have two methods with the same name but
+different signatures (or arguments). In a class we can implement two or more
+methods with the same name.
+```
 
-### [08 - Inheritance soluction](08-inheritance-solution.php) <!-- omit in toc -->
+What do we understand about the concept of Override?
 
-The child class will inherit all the public and protected properties and methods from the parent class. In addition, it can have its own properties and methods. In this file you will learn how to apply the inheritance in your code.
+```
+Overriding is a feature that enables a child class to provide different
+implementation for a method that is already defined and/or implemented in
+its parent class or one of its parent classes.
+```
 
-### [09 - Public, private & protected](09-public-private-protected.php) <!-- omit in toc -->
+What differences exist between the concept of Overload and Override?
 
-Properties and methods can have access modifiers which control where they can be accessed. In this file you will learn le three access modifiers.
+```
+1. Overriding implements Runtime Polymorphism whereas Overloading
+implements Compile time polymorphism.
 
-### [10 - Static](10-static.php) <!-- omit in toc -->
+2. The method Overriding occurs between superclass and subclass. Overloading
+occurs between the methods in the same class.
 
-Static properties and methods can be called directly - without creating an instance of the class first. In this file you will learn how to use static properties and methods.
+3. Overriding methods have the same signature i.e. same name and method arguments.
+Overloaded method names are the same but the parameters are different.
 
-### [11 - Const](11-const.php) <!-- omit in toc -->
+4. With Overloading, the method to call is determined at the compile-time.
+With overriding, the method call is determined at the runtime based on the object type.
 
-Constants cannot be changed once it is declared. Class constants can be useful if you need to define some constant data within a class. In this file you will learn how to create constants within a class.
+5. If overriding breaks, it can cause serious issues in our program because
+the effect will be visible at runtime. Whereas if overloading breaks, the
+compile-time error will come and it’s easy to fix.
+```
 
-### [12 - Abstract classes](12-abstract-classes.php) <!-- omit in toc -->
+What is a static class?
 
-Abstract classes and methods are when the parent class has a named method, but need its child class(es) to fill out the tasks. In this file you will learn how to create and use abstract classes.
+```
+Static classes are sealed and therefore cannot be inherited. They cannot inherit
+from any class except Object. Static classes cannot contain an instance constructor.
+However, they can contain a static constructor.
+```
 
-### [13 - Interfaces](13-interfaces.php) <!-- omit in toc -->
+Look for 3 advantages over object-oriented programming compared to other
+programming paradigms
 
-Interfaces allow you to specify what methods a class should implement.
-Interfaces make it easy to use a variety of different classes in the same way. When one or more classes use the same interface, it is referred to as "polymorphism". In this file you will learn how to create and extend interfaces.
+```
+1.Modularity for easier troubleshooting
 
-### [14 - Overriding](14-overriding.php) <!-- omit in toc -->
+When working with object-oriented programming languages, you know exactly
+where to look. “Oh, the car object broke down? The problem must be in the Car class!”
+You don’t have to muck through anything else.
 
-In function overriding, both parent and child classes should have same function name with and number of arguments. In this file you will learn how to implement overriding.
+2.Reuse of code through inheritance
 
-### [15 - Overloading](15-overloading.php) <!-- omit in toc -->
+Suppose that in addition to your Car object, one colleague needs a RaceCar object,
+and another needs a Limousine object. Everyone builds their objects separately but
+discover commonalities between them. In fact, each object is really just a different
+kind of Car. This is where the inheritance technique saves time: Create one generic
+class (Car), and then define the subclasses (RaceCar and Limousine) that are to
+inherit the generic class’s traits.
 
-Function overloading contains same function name and that function preforms different task according to number of arguments. In this file you will learn how to implement overloading.
+3.Flexibility through polymorphism
 
-### [16 - Namespaces](16-namespaces.php) <!-- omit in toc -->
+Riffing on this example, you now need just a few drivers, or functions, like “driveCar,”
+driveRaceCar” and “DriveLimousine.” RaceCarDrivers share some traits with LimousineDrivers,
+but other things, like RaceHelmets and BeverageSponsorships, are unique.
 
-Namespaces are qualifiers that solve two different problems:
+This is where object-oriented programming’s sweet polymorphism comes into play. Because a
+single function can shape-shift to adapt to whichever class it’s in, you could create one
+function in the parent Car class called “drive” — not “driveCar” or “driveRaceCar,”
+but just “drive.” This one function would work with the RaceCarDriver, LimousineDriver, etc.
+In fact, you could even have “raceCar.drive(myRaceCarDriver)” or “limo.drive(myChauffeur).”
 
-1. They allow for better organization by grouping classes that work together to perform a task
-2. They allow the same name to be used for more than one class
+4.Effective problem solving
 
-In this file you will learn how to create and use namespaces.
+Object-oriented programming is often the most natural and pragmatic approach, once you
+get the hang of it. OOP languages allows you to break down your software into bite-sized
+problems that you then can solve — one object at a time.
+
+```
+
+Look for disadvantages of this paradigm.
+
+```
+
+1. Steep learning curve: The thought process involved in object-oriented programming
+may not be natural for some people, and it can take time to get used to it. It is
+complex to create programs based on interaction of objects. Some of the key
+programming techniques, such as inheritance and polymorphism, can be
+challenging to comprehend initially.
+
+2. Larger program size: Object-oriented programs typically involve more lines of code
+than procedural programs.
+
+3. Slower programs: Object-oriented programs are typically slower than procedurebased
+programs, as they typically require more instructions to be executed.
+
+4. Not suitable for all types of problems: There are problems that lend themselves well
+to functional-programming style, logic-programming style, or procedure-based
+programming style, and applying object-oriented programming in those situations will
+not result in efficient programs.
+
+```
+
+<br/>
+<br/>
+
+# File analyzing
+
+### · File device.php<!-- omit in toc -->
+
+<br/>
+
+In this Class we have to create a logic in wiche the DeviceManager Class manage the
+function getDeviceSerialNumber wiche is calling the function getSerialNumber() in the Device Class.
+this triggers the echo of the serialNumber of the device.
+<br/>
+<br/>
+
+```
+· Create a class called Device.
+
+· Then create another one called Mobile and then another one called Tablet.
+
+· The Device has to define the common properties for a device, like, for example,
+a method called getSerialNumber() which returns the Device serial number.
+
+· The Mobile and Tablet classes have to extend the Device class and define some particular
+properties by their own.
+
+· You should also create a class called DeviceManager. This class has to have a method
+called getDeviceSerialNumber(Device $device) which has to call the getSerialNumber() method of
+Device objects.
+
+· The DeviceManager Instance calls the getDeviceSerialNumber method with each one of
+the devices objects.
+```
+
+### · File AbstractDevice.php <!-- omit in toc -->
+
+<br/>
+
+In this Abstract Class Device we had to create three functions, the function getDatil is called by
+the Mobile wiche extendes Device, and prints de ID of the mobile.
+<br/>
+<br/>
+
+```
+· Create an abstract class Device which defines an abstract method called getDetail($deviceId).
+
+· Create these two methods getId which returns the name of this device and getSerialNo
+returns the serial number for this device.
+
+· Now create a class which extends the Device and implements getDetail($deviceId) method.
+Each device defines in its own way the details. That’s why it is abstracted to let the subclasses
+implement this method. The other methods are common between devices.
+```
+
+### · File InterfaceDevice.php <!-- omit in toc -->
+
+<br/>
+We have 3 Classes DeviceManager, MemoryRepository, Device.
+DeviceRepository is an Interface wiche MemoryRepository has to implement in order
+to acces de createDevice() and findId() functions
+
+MemoryRepository creates an Array wiche is empty ath the begining until we create an instance of DeviceManager and we create the objet wiche will be injected by the function addDevice();
+<br/>
+<br/>
+
+Now let’s create an interface for a Device repository.
+
+```
+· First create a Device class with some properties, as you like.
+
+· Then create an interface called DeviceRepository, which defines two methods create(Device $device)
+which has an injection of the Device class you have created, and findById($deviceId) which with the
+$deviceId returns the Device object but remember this is an interface do not implement methods,
+it just defines them.
+
+· Now we need an implementation of the interface DeviceRepository so we are going to create a
+class called MemoryRepository which implements the DeviceRepository. Here you can define the methods
+as you like.
+
+· Finally we need to create a class called DeviceManager, which defines a method
+addDevice(DeviceRepository $repository, Device $device).
+
+· Create an instance of it and inject to this method the implementation you have done.
+
+Remember this is to check your understanding about OOP.
+
+```
