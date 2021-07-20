@@ -12,6 +12,26 @@ In this project you will learn the basics of OOP using mobile devices as a refer
 - [Tools](#tools)
 - [OOP Introduction](#oop-introduction)
 - [Project files](#project-files)
+- [OOP questions](#oop-questions)
+  - [* What is object-oriented programming in general terms?](#-what-is-object-oriented-programming-in-general-terms)
+  - [* What is a class?](#-what-is-a-class)
+  - [* What is an object?](#-what-is-an-object)
+  - [* What is an instance?](#-what-is-an-instance)
+  - [* What is a property?](#-what-is-a-property)
+  - [* What is a method?](#-what-is-a-method)
+  - [* What is the difference between a function and a method?](#-what-is-the-difference-between-a-function-and-a-method)
+  - [* What is a constructor?](#-what-is-a-constructor)
+  - [* What is the difference between a class, an object and an instance?](#-what-is-the-difference-between-a-class-an-object-and-an-instance)
+  - [* What do we understand about the concept of encapsulation?](#-what-do-we-understand-about-the-concept-of-encapsulation)
+  - [* What do we understand about the concept of abstraction?](#-what-do-we-understand-about-the-concept-of-abstraction)
+  - [* What do we understand about the concept of inheritance?](#-what-do-we-understand-about-the-concept-of-inheritance)
+  - [* What do we understand about the concept of polymorphism?](#-what-do-we-understand-about-the-concept-of-polymorphism)
+  - [* What do we understand about the concept of Overload?](#-what-do-we-understand-about-the-concept-of-overload)
+  - [* What do we understand about the concept of Override?](#-what-do-we-understand-about-the-concept-of-override)
+  - [* What differences exist between the concept of Overload and Override?](#-what-differences-exist-between-the-concept-of-overload-and-override)
+  - [* What is a static class?](#-what-is-a-static-class)
+  - [* Look for 3 advantages over object-oriented programming compared to other programming paradigms.](#-look-for-3-advantages-over-object-oriented-programming-compared-to-other-programming-paradigms)
+  - [* Look for disadvantages of this paradigm.](#-look-for-disadvantages-of-this-paradigm)
 
 ## Getting Started
 
@@ -134,3 +154,70 @@ Namespaces are qualifiers that solve two different problems:
 2. They allow the same name to be used for more than one class
 
 In this file you will learn how to create and use namespaces.
+
+## OOP questions
+
+### * What is object-oriented programming in general terms?
+La Programación orientada a objetos es una estructura o paradigma de programación que se basa en la creación de “objetos”, entidades con un estado específico, una identidad y un comportamiento o método.
+
+### * What is a class?
+Una clase es un elemento que establece la estructura general de un tipo de objeto y establece sus métodos y propiedades predeterminadas.
+
+### * What is an object?
+Como ya hemos dicho, un objeto es una entidad o elemento con propiedades, estados y métodos (funciones) propias. 
+
+### * What is an instance?
+Los objetos son instancias de las clases, es decir, una concreción de esa estructura general.
+
+### * What is a property?
+Son los valores que las clases y los objetos tienen, ya sean heredados u obtenidos al crear el objeto. En resumen, son las variables que contienen los objetos desde el inicio.
+
+### * What is a method?
+Los métodos son las funciones que los objetos heredan u obtienen al crearse, tal y como pasa con las propiedades.
+
+### * What is the difference between a function and a method?
+La única diferencia entre ambas es su naturaleza, ya que el método es una función asociada al objeto u clase desde el inicio.
+
+### * What is a constructor?
+El constructor es la función que permite crear un objeto a partir de una clase, estableciendo sus propiedades y métodos.
+
+### * What is the difference between a class, an object and an instance?
+El objeto como elemento general de programación es simplemente un conjunto de datos diferentes y sus funcionalidades.
+Una clase es un elemento que establece la estructura, propiedades y funciones por defecto de los objetos que se podrán crear a partir de la misma.
+La instancia es la concreción de una clase en un objeto.
+
+### * What do we understand about the concept of encapsulation?
+Es la característica de los objetos y de la OOP de recoger un conjunto de datos en un mismo nivel y, juntamente con la característica de ocultación, impide acceder a esos datos fuera del objeto.
+
+### * What do we understand about the concept of abstraction?
+Es la característica de los objetos y de la OOP que permite abstraer o “simplificar” funciones y comportamientos complejos en simples métodos. Es decir, permite crear funcionamientos complejos y ocultarlos al usuario.
+
+### * What do we understand about the concept of inheritance?
+Es la característica de los objetos y de la OOP que permite transmitir información (propiedades y métodos) y estructuras de un elemento a otro, generalmente entre clases o de clases a objetos.
+
+### * What do we understand about the concept of polymorphism?
+Es la característica de los objetos y de la OOP para cambiar y adaptar su forma según los elementos contextuales y los elementos que forman parte del mismo.
+En otras palabras, se pueden adaptar los objetos para que tengan diferentes métodos y resultados aún viniendo de la misma clase.
+
+### * What do we understand about the concept of Overload?
+Es la capacidad de una clase u objeto de tener diferentes métodos con el mismo nombre que necesitan parámetros diferentes y, por lo tanto, responden a los mismos de formas distintas.
+
+### * What do we understand about the concept of Override?
+Es la capacidad de una clase u objeto de redefinir un método de la parent class.
+
+### * What differences exist between the concept of Overload and Override?
+Overload es la adaptación de un método a diferentes parámetros, por lo que los argumentos que le pasemos siempre deberán ser diferentes.
+En cambio override obliga a mantener la misma estructura para el método modificado, siendo los parámetros a pasar siempre los mismos.
+
+### * What is a static class?
+Las clases estáticas son clases que no pueden ser instanciadas ni heredadas, pero si son accesibles (también sus propiedades y métodos) desde fuera de la misma.
+
+### * Look for 3 advantages over object-oriented programming compared to other programming paradigms.
+- Versatilidad en su uso y mantenimiento en programación gracias a su reusabilidad.
+- Su capacidad de protección y privacidad gracias a sus propiedades de encapsulamiento, visibilidad y abstracción.
+- Efectividad al poder usar y adaptar las clases para diferentes usos gracias a la herencia.
+
+### * Look for disadvantages of this paradigm.
+- Tamaño, ya que tanto las clases como sus instancias ocupan espacios de memoria.
+- Performance, a más tamaño menos velocidad en su ejecución (aunque no siempre es así).
+- Complejidad, que tanto le permite construir elementos más complejos y facilitar su uso al usuario, como complicar su creación.
