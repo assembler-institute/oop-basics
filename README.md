@@ -11,6 +11,7 @@ In this project you will learn the basics of OOP using mobile devices as a refer
 - [Dependencies](#dependencies)
 - [Tools](#tools)
 - [OOP Introduction](#oop-introduction)
+- [Investigation](#investigation)
 - [Project files](#project-files)
 
 ## Getting Started
@@ -63,6 +64,55 @@ Once downloaded and installed, in the case that the Windows operating system you
 
 Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects", which can contain data and code: data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods).
 
+## Investigation
+* What is object-oriented programming in general terms?
+> programming paradigm that relies on the concept of classes and objects. It is used to structure a software program into simple, reusable pieces of code blueprints (usually called classes), which are used to create individual instances of objects.
+* What is a class?
+> Extensible program-code-template used to create objects, providing initial values for state (member variables) and implementations of behavior (member functions or methods).
+* What is an object?
+> An object is a copy of the class, but its properties are assigned values at the moment of delcaration using the constructor method.
+* What is an instance?
+> Memory space assigned to store an object of a class. It is also the identifier of the object, in other words, it is also variable name of the object.
+* What is a property?
+> Variable contained inside the class code. They can have a default value assigned or not. That will always depend on the programmer's needs and the objective of the class. It is also important when declaring a property to add a visibility keyword before their name so as to avoid or allow specific access to it. 
+* What is a method?
+> Function contained inside of a class code. It can only be called via class objects or if the class is an static one, then the only way to call the method is by using the class name itself.
+* What is the difference between a function and a method?
+> Functions are snippets of code that can be called by their name and be executed. They can receive data as parameters if they require it and they are able to return data if they need to with a return statement.
+>
+> Methods, operate the same way as fucntions, but with two main differences:
+> 
+> * Methods can only be called via an object of the class or if the class is an static one via the class name.
+> * Methods can receive both class properties and variables outside the class as parameters if they need too, whereas functions cannot interact with class properties directly.
+* What is a constructor?
+> Method used to initialize the values of properties of a class object if required. There can be empty constructor methods, which would mean no initial values are assigned to the class object properties. The constructor method is called everytime an object is created.
+* What is the difference between a class, an object and an instance?
+> - **CLASS**: template of code.
+> - **OBJECT**: copy of class with maybe specific initial values assigned to class properties.
+> - **INSTANCE**: memory space reserved to store the object and variable name of it.
+* What do we understand about the concept of encapsulation?
+> Ability to allow or prevent interactions between different objects properties and methods. To do so the visibility keywords are used when declaring the class properties and methods of any class. The visibility words are meant to prevent undesired access from outside objects.
+* What do we understand about the concept of abstraction?
+> Programmer's ability to understand the problem to solve to be able to create classes that have only what is necessary. In other words, desigining each class, which will be used to create objects later, with only the properties and methods that are required to accomplish its objective.
+* What do we understand about the concept of inheritance?
+> Ability to reuse a class code using the keyword **extends** just after the class name and then add then add the parent class name after **extends**. Inheritance allows the total reusability of the parent class and also the addition of new properties and methods. The main idea is to create a **new class** using the parent one as a basis to avoid repeating code.
+* What do we understand about the concept of polymorphism?
+> Ability of different classes to share the same method, but each one having a different implementation for it. This is usually accomplished via using interface classes, which are a type of class that is meant to establish methods that will need to be implemented by every class that inherits the interface class. interface class inheritance is different to normal inheritance and it is done by adding the keyword **implements** after the class name and then adding the interface class name after the word **implements**. Normal inheritance and interface class inheritance are not mutually-exclusive. There might be cases in which both are used at the same time. If that happened to be the case the word **implements** would be added just after the normal inheritance class name.
+* What do we understand about the concept of Overload?
+> Overloading a method simply means two or more methods have the same method name with different arguments or parameters(compulsory) and return type(not necessary).
+* What do we understand about the concept of Override?
+> Overriding a method simply means that a subclass redefines its inherited method(s) when it needs to change or extend the behavior of that method.
+* What differences exist between the concept of Overload and Override?
+> Method overloading happens when the same class shares the same method name but each method should have different number of parameters or parameters having different types and order, whereas in method overriding the derived class has the same method with same name and exactly the same number and type of parameters and same return type as a parent class.
+* What is a static class?
+> Class that is not meant to have any object instanced of it. Static classes are meant to store some properties and methods and have them called using the class name.
+* Look for 3 advantages over object-oriented programming compared to other programming paradigms
+>  1. **Modularity**: ability to divide in modules in a very accurate and practical way using classes.
+> 2. **Reusability**: ability to reuse units of code. This can be done through different means such as inheritance and polymorphism.
+> 3. **Safety**: ability to limit the access to class attributes and methods using visibility keywords (private, protected and public).
+* Look for disadvantages of this paradigm.
+> Not recommended if the problem to solve is quite simple due to the complexity that using the paradigm entails.
+> 
 ## Project files
 
 ### [01 - Classes](./01-classes.php) <!-- omit in toc -->
@@ -134,3 +184,4 @@ Namespaces are qualifiers that solve two different problems:
 2. They allow the same name to be used for more than one class
 
 In this file you will learn how to create and use namespaces.
+
