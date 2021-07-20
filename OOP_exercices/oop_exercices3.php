@@ -69,5 +69,10 @@ class DeviceManager
 {
     function addDevice(DeviceRepository $repository, Device $device)
     {
+        echo "Done";
     }
 }
+
+$finalTest = new DeviceManager;
+echo "</br>";
+$finalTest->addDevice($test, $nokia);
