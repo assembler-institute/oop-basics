@@ -1,136 +1,143 @@
-`#php` `#oop` `#master-in-software-engineering`
+# OOP-Basics
 
-# Assembler School: OOP Basics with PHP <!-- omit in toc -->
+In the paradigm of object-oriented programming, there are many mechanisms that allow us to carry out the design of our software to be solid and scalable. Classes, Properties, Herency, Interface Polymorphism, Constructor and Destructors. Let’s take a look at all of this.
 
-In this project you will learn the basics of OOP using mobile devices as a reference. In the _"Project files"_ section you will find a description of the content to be displayed in each file.
+## What are the main objectives in this project?
 
-## Table of contents
+● Improve your knowledge in object-oriented programming.
 
-- [Table of contents](#table-of-contents)
-- [Getting Started](#getting-started)
-- [Dependencies](#dependencies)
-- [Tools](#tools)
-- [OOP Introduction](#oop-introduction)
-- [Project files](#project-files)
+● Understand Herency.
 
-## Getting Started
+● Understand how to use Abstraction.
 
-### The repo <!-- omit in toc -->
+● Understand what is Polymorphism.
 
-First, you will need to clone the repo:
+● Understand what interfaces are and what they are used for.
 
-```bash
-$ git clone https://github.com/assembler-school/oop-basics.git
-```
+## Theoretical part
 
-### Presentation material <!-- omit in toc -->
+● What is object-oriented programming in general terms?
 
-- [Slides](https://docs.google.com/presentation/d/1cZxutGPDqUGsLWLVen_ATjd7dEkeoPS_v_fy1y0C5Co/edit?usp=sharing)
+Object-oriented programming (OOP) is a computer programming model that organizes software design around data, or objects, rather than functions and logic. ... OOP focuses on the objects that developers want to manipulate rather than the logic required to manipulate them.
 
-## Dependencies
+● What is a class?
 
-Before we can get started you will need to make sure that all the necessary dependencies are installed in your system.
+In object-oriented programming, a class is an extensible program-code-template for creating objects, providing initial values for state (member variables) and implementations of behavior (member functions or methods).
 
-### PHP <!-- omit in toc -->
+● What is an object?
 
-You can install it by following the instructions [in the official docs](https://www.php.net/downloads) (we recommend that you install the version that is named _Current_).
+In object-oriented programming (OOP), objects are the things you think about first in designing a program and they are also the units of code that are eventually derived from the process. ... Each object is an instance of a particular class or subclass with the class's own methods or procedures and data variables.
 
-To verify that you have installed it correctly, you can run the following command from the terminal that should output the version installed:
+● What is an instance?
 
-```bash
-$ php -version
-```
+In object-oriented programming (OOP), an instance is a concrete occurrence of any object, existing usually during the runtime of a computer program. ... The creation of an instance is called instantiation. An object may be varied in a number of ways. Each realized variation of that object is an instance of its class.
 
-## Tools
+● What is a property?
 
-In the event that you prefer to use a tool that installs everything you need to configure and run a PHP server, we recommend using [XAMPP](https://www.apachefriends.org/es/download.html)
+A property, in some object-oriented programming languages, is a special sort of class member, intermediate in functionality between a field (or data member) and a method.
 
-### XAMPP <!-- omit in toc -->
+● What is a method?
 
-XAMPP is a completely free and easy to install Apache distribution that contains MariaDB, PHP, and Perl. The XAMPP installation package has been designed to be incredibly easy to install and use.
+A method in object-oriented programming (OOP) is a procedure associated with a message and an object. ... This allows the sending objects to invoke behaviors and to delegate the implementation of those behaviors to the receiving object. A method in PHP programming sets the behavior of a class object.
 
-<img src='./assets/img/xampp-homepage.png' width='600' alt='xampp homepage'>
+● What is the difference between a function and a method?
 
-You have to go to the [download page](https://www.apachefriends.org/es/download.html) and it will automatically recommend installing the latest version available.
+Method and a function are the same, with different terms. A method is a procedure or function in object-oriented programming. A function is a group of reusable code which can be called anywhere in your program. This eliminates the need for writing the same code again and again
 
-<img src='./assets/img/xampp-download.png' width='600' alt='xampp download'>
+● What is a constructor?
 
-Once downloaded and installed, in the case that the Windows operating system you will see the following screen, in which you will only have to start the Apache service.
+In class-based object-oriented programming, a constructor (abbreviation: ctor) is a special type of subroutine called to create an object. It prepares the new object for use, often accepting arguments that the constructor uses to set required member variables. ... Immutable objects must be initialized in a constructor.
 
-<img src='./assets/img/xampp-app.png' width='600' alt='xampp app'>
+● What is the difference between a class, an object and an instance?
 
-## OOP Introduction
+A class is a blueprint which you use to create objects. An object is an instance of a class - it's a concrete 'thing' that you made using a specific class. So, 'object' and 'instance' are the same thing, but the word 'instance' indicates the relationship of an object to its class.
 
-Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects", which can contain data and code: data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods).
+● What do we understand about the concept of encapsulation?
 
-## Project files
+Encapsulation in OOP Meaning: In object-oriented computer programming languages, the notion of encapsulation (or OOP Encapsulation) refers to the bundling of data, along with the methods that operate on that data, into a single unit. Many programming languages use encapsulation frequently in the form of classes.
 
-### [01 - Classes](./01-classes.php) <!-- omit in toc -->
+● What do we understand about the concept of abstraction?
 
-The OOP paradigm encapsulates concepts of the real world in what is called as Classes which create Objects. In this file you will learn how to create a class and instanciate it.
+Abstraction is the concept of object-oriented programming that "shows" only essential attributes and "hides" unnecessary information. The main purpose of abstraction is hiding the unnecessary details from the users. ... It is one of the most important concepts of OOPs.
 
-### [02 - Properties](02-properties.php) <!-- omit in toc -->
+● What do we understand about the concept of inheritance?
 
-Class member variables are called properties. In this file, you will learn how to add properties to a class and get them when the class is instantiated.
+Inheritance is the procedure in which one class inherits the attributes and methods of another class. The class whose properties and methods are inherited is known as the Parent class. And the class that inherits the properties from the parent class is the Child class.
 
-### [03 - Methods](03-methods.php) <!-- omit in toc -->
+● What do we understand about the concept of polymorphism?
 
-Properties define the characteristics of an object and the methods (functions in a class are called methods) which define the behavior of the Class. In this file you will learn how to create methods inside a class.
+Polymorphism is the ability of any data to be processed in more than one form. ... Polymorphism is one of the most important concept of object oriented programming language. The most common use of polymorphism in object-oriented programming occurs when a parent class reference is used to refer to a child class object.
 
-### [04 - Getters](04-getters.php) <!-- omit in toc -->
+● What do we understand about the concept of Overload?
 
-The get method returns the attribute value, usually there is a get method for each attribute of the class. In this file you will learn how to create **getter** methods.
+Overloading. Method overloading is a form of polymorphism in OOP. ... Overloading happens when you have two methods with the same name but different signatures (or arguments). In a class we can implement two or more methods with the same name.
 
-### [05 - Setters](05-setters.php) <!-- omit in toc -->
+● What do we understand about the concept of Override?
 
-The set method sets the attribute value, usually there is a get method for each attribute of the class. In this file you will learn how to create **setter** methods.
+In any object-oriented programming language, Overriding is a feature that allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its super-classes or parent classes.
 
-### [06 - Constructors](06-constructors.php) <!-- omit in toc -->
+● What differences exist between the concept of Overload and Override?
 
-A constructor allows you to initialize an object's properties upon creation of the object. In this file you will learn how to create the constructor method.
+The most basic difference is that overloading is being done in the same class while for overriding base and child classes are required. Overriding is all about giving a specific implementation to the inherited method of parent class. ... private and final methods can be overloaded but they cannot be overridden.
 
-### [07 - Inheritance problem](07-inheritance-problem.php) <!-- omit in toc -->
+● What is a static class?
 
-There are several disadvantages of not applying inheritance in our code. In this file you will lean what's the problem if you don't apply any inheritance in your code.
+A static class in PHP is a type of class which is instantiated only once in a program. It must contain a static member (variable) or a static member function (method) or both. The variables and methods are accessed without the creation of an object, using the scope resolution operator(::).
 
-### [08 - Inheritance soluction](08-inheritance-solution.php) <!-- omit in toc -->
+● Look for 3 advantages over object-oriented programming compared to other programming paradigms
 
-The child class will inherit all the public and protected properties and methods from the parent class. In addition, it can have its own properties and methods. In this file you will learn how to apply the inheritance in your code.
+Improved productivity: we can reuse code in an easy way and code faster.
 
-### [09 - Public, private & protected](09-public-private-protected.php) <!-- omit in toc -->
+High abstraction level: focused on the functionalities not in the code.
 
-Properties and methods can have access modifiers which control where they can be accessed. In this file you will learn le three access modifiers.
+Rich encapsulation: makes secure and easy to maintain code.
 
-### [10 - Static](10-static.php) <!-- omit in toc -->
+● Look for disadvantages of this paradigm.
 
-Static properties and methods can be called directly - without creating an instance of the class first. In this file you will learn how to use static properties and methods.
+Steep learning curve: may take time to get used to it.
 
-### [11 - Const](11-const.php) <!-- omit in toc -->
+Larger program size.
 
-Constants cannot be changed once it is declared. Class constants can be useful if you need to define some constant data within a class. In this file you will learn how to create constants within a class.
+Slower programs.
 
-### [12 - Abstract classes](12-abstract-classes.php) <!-- omit in toc -->
+## Requeriments
 
-Abstract classes and methods are when the parent class has a named method, but need its child class(es) to fill out the tasks. In this file you will learn how to create and use abstract classes.
+Your practical OOP example must accomplish this requirements:
 
-### [13 - Interfaces](13-interfaces.php) <!-- omit in toc -->
+● Base class that will be inherited at least once.
 
-Interfaces allow you to specify what methods a class should implement.
-Interfaces make it easy to use a variety of different classes in the same way. When one or more classes use the same interface, it is referred to as "polymorphism". In this file you will learn how to create and extend interfaces.
+    ○	This base case must have at least:
 
-### [14 - Overriding](14-overriding.php) <!-- omit in toc -->
+        ■	3 properties
 
-In function overriding, both parent and child classes should have same function name with and number of arguments. In this file you will learn how to implement overriding.
+        ■	3 methods
 
-### [15 - Overloading](15-overloading.php) <!-- omit in toc -->
+        ■	1 constructor and 1 destructor
 
-Function overloading contains same function name and that function preforms different task according to number of arguments. In this file you will learn how to implement overloading.
+● One class that inherits the base class.
 
-### [16 - Namespaces](16-namespaces.php) <!-- omit in toc -->
+    ○	This class must add:
 
-Namespaces are qualifiers that solve two different problems:
+        ■	1 static property
 
-1. They allow for better organization by grouping classes that work together to perform a task
-2. They allow the same name to be used for more than one class
+        ■	1 method
 
-In this file you will learn how to create and use namespaces.
+    ○	This class must override:
+
+        ■	1 property
+
+        ■	1 method
+
+● One abstract class with at least:
+
+    ○	2 properties
+
+    ○	2 methods
+
+● One interface that must be implemented by one class.
+
+    ○	This interface must have at least 2 methods.
+
+## Authors
+
+- [@paulMolano](https://github.com/paulMolano)
