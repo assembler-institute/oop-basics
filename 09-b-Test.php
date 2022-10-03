@@ -4,6 +4,7 @@
 
     class Marsupial extends Animal {
         public string $liveIn = 'Forest';
+        public bool $vertebrate = false;
         static $alive = "Alive";
 
         function __construct($type, $vertebrate, $timeLife){
@@ -16,6 +17,11 @@
 
         public function getLive():string {
             return $this->liveIn;
+        }
+
+        public function greetings() {
+            $greet = parent::greetings();
+            return $greet . ' changed';
         }
 
 

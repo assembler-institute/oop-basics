@@ -1,7 +1,7 @@
 <?php
 
     class Animal {
-        public bool $vertebrate;
+        public bool $vertebrate = true;
         public string $type;
         public string $timeLife;
 
@@ -9,6 +9,11 @@
             $this->type = $type;
             $this->vertebrate = $vertebrate;
             $this->timeLife = $timeLife;
+        }
+
+        
+        public function greetings() {
+            return 'Hello';
         }
 
         public function __destruct() {

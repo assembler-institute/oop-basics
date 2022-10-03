@@ -47,7 +47,7 @@
     echo '<br>';
 
     echo $marsupial->liveIn;
-    echo '<br><br>';
+    echo '<br>';
 
     echo '<br>';
     echo $marsupialType;
@@ -56,6 +56,10 @@
     echo '<br>';
     echo $marsupialTimeLife;
     echo '<br>';
-    echo '<br><br>';
+
+    echo $mammal->greetings();
+    echo '<br>';
+    echo $marsupial->greetings();
+    echo '<br>';
 
 ?>
