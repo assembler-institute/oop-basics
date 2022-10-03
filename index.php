@@ -1,10 +1,28 @@
 <?php
 
+    require_once('./10-b-Test-Abstract.php');
     require_once('./09-b-Test.php');
 
     $insect = new Animal('Insect', false, '1 Month');
     $mammal = new Animal('Mammal', true, '20 years');
     $marsupial = new Marsupial('Mammal', true, '30 years');
+    $marino = new Marino('Marine', true, '10 years');
+
+    echo '<pre>';
+    var_dump($marino);
+    echo '</pre>';
+
+    $marinoType = $marino->getType();
+    $marinoVertebrate = $marino->getVertebrate();
+    $marinoTimeLife = $marino->getTimeLife();
+
+    echo '<br>';
+    echo $marinoType;
+    echo '<br>';
+    var_dump($marinoVertebrate);
+    echo '<br>';
+    echo $marinoTimeLife;
+    echo '<br>';
 
     echo '<pre>';
     var_dump($insect);
