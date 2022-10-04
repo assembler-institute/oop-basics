@@ -1,8 +1,8 @@
 <?php
 interface Properties{ 
     
-    public function Breath(string $breath):string;
-    public function Move(string $move):string;
+    public function Breath(string $breath);
+    public function Move(string $move);
 
 }
 
