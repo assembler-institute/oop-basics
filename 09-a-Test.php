@@ -1,6 +1,8 @@
 <?php
 
-    class Animal {
+    require_once('./Interface.php');
+
+    class Animal implements Operation {
         public bool $vertebrate = true;
         public string $type;
         public string $timeLife;
