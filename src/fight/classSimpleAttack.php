@@ -1,27 +1,47 @@
 <?php
 
-final class SimpleAttack {
-    private String $name;
-    private int $damage;
+require_once('../config.php');
+require_once(SITE_ROOT . '/src/fight/interfaceDamage.php');
 
-    function __construct(String $name, int $damage) {
-        $this->name = $name;
-        $this->damage = $damage;
-    }
+final class SimpleAttack implements CauseDamage 
+{
+  private string $name;
+  private int $damage;
 
-    public function getName():String {
-        return $this->name;
-    }
+  function __construct(string $name, int $damage)
+  {
+    $this->name = $name;
+    $this->damage = $damage;
+  }
 
-    public function setName(String $name):void {
-        $this->name = $name;
-    }
+  public function getName(): string
+  {
+    return $this->name;
+  }
 
-    public function getDamage():int {
-        return $this->damage;
-    }
+  public function setName(string $name): void
+  {
+    $this->name = $name;
+  }
 
-    public function setDamage(int $damage):void {
-        $this->damage = $damage;
-    }
+  public function getDamage(): int
+  {
+    return $this->damage;
+  }
+
+  public function setDamage(int $damage): void
+  {
+    $this->damage = $damage;
+  }
+
+	public function calcDamage(SimpleAttack $move): int {
+    echo "Attacked with . . . <b>" . $move->getName() . '</b> with damage of . . . <b>' . $this->damage . '</b><br>';
+    return 1;
+	}
+
+  function toString(): void
+  {
+    echo "Name - <b>" . ucfirst($this->name) . '</b><br>' .
+    "Damage - <b>" . $this->damage . ' power</b><br>';
+  }
 }

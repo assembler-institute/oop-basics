@@ -1,17 +1,26 @@
 <?php
 class Character {
 
-    private $nombre;
+    protected $name;
 
-    function __construct(string $nombre){
-        $this->nombre = $nombre;
+    function __construct(string $name){
+        $this->name = $name;
     }
 
-    public function getNombre():string {
-        return $this->nombre;
+    public function getName():string {
+        return $this->name;
     }
 
-    public function setNombre (string $nombre):void{
-        $this->nombre = $nombre;
+    public function setName (string $name):void{
+        $this->name = $name;
     }
+
+  function talk() {
+    echo $this->name . ' is talking . . .';
+  }
+
+  function toString():void
+  {
+    echo "Name - <strong>" . $this->name . '</strong><br>';
+  }
 }

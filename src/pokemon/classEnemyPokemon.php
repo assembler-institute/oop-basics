@@ -1,52 +1,18 @@
 <?php
 require_once(SITE_ROOT . '/src/pokemon/classPokemon.php');
 require_once(SITE_ROOT . '/src/fight/classSimpleAttack.php');
-final class PlayerPokemon extends Pokemon
+final class EnemyPokemon extends Pokemon
 {
   private int $experience;
 
   private static $defaultMove = 'thunderbolt';
 
 
-  public function __construct(string $name, int $life, int $experience, SimpleAttack $attack, array $moves)
+  public function __construct(string $name, int $life, SimpleAttack $attack, array $moves)
   {
     parent::__construct($name, $life, $attack, $moves);
-    $this->experience = $experience;
-    switch ($experience) {
-      case 0:
-        parent::setLevel(0);
-        break;
-      case 100:
-        parent::setLevel(1);
-        break;
-      case 200:
-        parent::setLevel(2);
-        break;
-      case 300:
-        parent::setLevel(3);
-        break;
-      case 400:
-        parent::setLevel(4);
-        break;
-      case 500:
-        parent::setLevel(5);
-        break;
-      case 600:
-        parent::setLevel(6);
-        break;
-      case 700:
-        parent::setLevel(7);
-        break;
-      case 800:
-        parent::setLevel(8);
-        break;
-      case 900:
-        parent::setLevel(9);
-        break;
-      case 1000:
-        parent::setLevel(10);
-        break;
-    }
+    $this->experience = 100;
+    $this->level = 1;
   }
 
   function setDefaultMove(string $move): void
@@ -63,7 +29,7 @@ final class PlayerPokemon extends Pokemon
 
   function toString(): void
   {
-    echo "<h1>Pokemon</h1>";
+    echo "<h1>Enemy Pokemon</h1>";
     echo "Name - <b>" . $this->name . '</b><br>';
     echo "Level - <b>" . $this->level . '</b><br>';
     echo "Life - <b>" . $this->life . '</b><br>';

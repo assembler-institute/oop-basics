@@ -1,19 +1,28 @@
  <?php
- require_once('src/items/classSmartphone.php');
+ require_once('../config.php');
+ require_once(SITE_ROOT . '/src/items/classSmartphone.php');
 
  final class PlayerBag
  {
 
    private int $capacity;
    private Smartphone $smartphone;
-   private array $myPokemon;
 
 
-   function __construct(int $capacity, Smartphone $smartphone, array $myPokemon)
+   function __construct(int $capacity, Smartphone $smartphone)
    {
      $this->capacity = $capacity;
      $this->smartphone = $smartphone;
-     $this->myPokemon = $myPokemon;
    }
 
+   function getSmartphone(): Smartphone {
+    return $this->smartphone;
+   }
+
+   function toString(): void
+   {
+     echo "Bag Capacity - <strong>" . $this->capacity . ' articles</strong><br>' .
+    "<h2>Smartphone:</h2>";
+     echo $this->smartphone->toString() . '<br>';
+   }
  }

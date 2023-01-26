@@ -7,10 +7,15 @@ abstract class Pokemon
   protected int $level;
   protected int $life;
 
-  public function __construct(string $name, int $life)
+  protected SimpleAttack $attack;
+  protected array $moves;
+
+  public function __construct(string $name, int $life, SimpleAttack $attack, array $moves)
   {
     $this->name = $name;
     $this->life = $life;
+    $this->attack = $attack;
+    $this->moves = $moves;
     $this->level = 0;
   }
 
@@ -43,5 +48,20 @@ abstract class Pokemon
   public function setLife(int $life): void
   {
     $this->life = $life;
+  }
+
+  function getAttack(): SimpleAttack
+  {
+    return $this->attack;
+  }
+
+  abstract function attack(string $move): void;
+  abstract function setDefaultMove(string $move): void;
+
+  function toString(): void
+  {
+    echo $this->name . '<br>' .
+      $this->life . '<br>' .
+      $this->level . '<br>';
   }
 }

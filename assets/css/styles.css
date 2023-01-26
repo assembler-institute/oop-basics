@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+.text-center {
+  text-align: center;
+  background-color: rgb(224, 176, 176);
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  background-color: rgb(212, 212, 236);
+}
+
+.ms-0 {
+  margin-left: -300px;
+}
