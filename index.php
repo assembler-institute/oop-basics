@@ -13,7 +13,7 @@ $game = getInstance();
 $gamePokemon = $game->getUser()->getLastPokemon();
 $gameSmartphone = $game->getUser()->getItems()->getSmartphone();
 
-include(SITE_ROOT . '/src/views/header.html');
+include(SITE_ROOT . '/src/views/header.php');
 echo "<div class='container'><h1 class='text-center'>Created Game</h1>";
 $game->toString();
 
