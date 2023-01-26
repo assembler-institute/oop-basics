@@ -1,9 +1,10 @@
 <?php
-require_once('../config.php');
-require_once(SITE_ROOT . '/src/classGame.php');
-require_once(SITE_ROOT . '/src/items/classPlayerBag.php');
-require_once(SITE_ROOT . '/src/items/classSmartphone.php');
-require_once(SITE_ROOT . '/src/characters/classPlayer.php');
+require_once('config.php');
+require_once(SITE_ROOT . '/src/controllers/getInstance.php');
+require_once(SITE_ROOT . '/src/models/items/classPlayerBag.php');
+require_once(SITE_ROOT . '/src/models/items/classSmartphone.php');
+require_once(SITE_ROOT . '/src/models/fight/classGame.php');
+require_once(SITE_ROOT . '/src/models/characters/classPlayer.php');
 
 $game = getInstance();
 
@@ -12,7 +13,7 @@ $game = getInstance();
 $gamePokemon = $game->getUser()->getLastPokemon();
 $gameSmartphone = $game->getUser()->getItems()->getSmartphone();
 
-include(SITE_ROOT . '/assets/templates/header.html');
+include(SITE_ROOT . '/src/views/header.html');
 echo "<div class='container'><h1 class='text-center'>Created Game</h1>";
 $game->toString();
 

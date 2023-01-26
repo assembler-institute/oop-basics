@@ -1,9 +1,7 @@
 <?php
-require_once('../config.php');
-require_once(SITE_ROOT . '/src/characters/classCharacter.php');
-require_once(SITE_ROOT . '/src/items/classPlayerBag.php');
-require_once(SITE_ROOT . '/src/pokemon/classPlayerPokemon.php');
-require_once(SITE_ROOT . '/src/views/containerImg.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/php-oop-basics/config.php');
+require_once(SITE_ROOT . '/src/models/characters/classCharacter.php');
+
 
 final class Player extends Character
 {

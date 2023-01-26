@@ -1,7 +1,6 @@
 <?php
-require_once(SITE_ROOT . '/src/pokemon/classPokemon.php');
-require_once(SITE_ROOT . '/src/fight/classSimpleAttack.php');
-require_once(SITE_ROOT . '/src/views/containerImg.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/php-oop-basics/config.php');
+require_once(SITE_ROOT . '/src/models/pokemon/classPokemon.php');
 
 final class EnemyPokemon extends Pokemon
 {

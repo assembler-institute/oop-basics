@@ -1,7 +1,7 @@
 <?php
 
-require_once('../config.php');
-require_once(SITE_ROOT . '/src/fight/interfaceDamage.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/php-oop-basics/config.php');
+require_once(SITE_ROOT . '/src/models/fight/interfaceDamage.php');
 
 final class SimpleAttack implements CauseDamage 
 {
