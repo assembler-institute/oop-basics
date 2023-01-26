@@ -13,7 +13,7 @@ $gamePokemon = $game->getUser()->getLastPokemon();
 $gameSmartphone = $game->getUser()->getItems()->getSmartphone();
 
 include(SITE_ROOT . '/assets/templates/header.html');
-echo "<div class='container'><h1 class='text-center red'>Created Game</h1>";
+echo "<div class='container'><h1 class='text-center'>Created Game</h1>";
 $game->toString();
 
 echo '<h1 class="text-center">Game Fight</h1>';
@@ -25,21 +25,21 @@ $game->getUser()->talk();
 echo '<h1 class="text-center">Smartphone Call</h1>';
 $gameSmartphone->call('doctor');
 
-echo '<h1 class="text-center blue">STATIC Smartphone Call</h1>';
+echo '<h1 class="text-center yellow">STATIC Smartphone Call</h1>';
 $gameSmartphone->call('');
 echo '<h3 class="ms-0">Changing Default PUBLIC Number</h3>';
 Smartphone::$defaultCall = 'brock';
-echo '<h1 class="text-center blue">STATIC Smartphone Call</h1>';
+echo '<h1 class="text-center yellow">STATIC Smartphone Call</h1>';
 $gameSmartphone->call('');
 
 echo '<h1 class="text-center">Pokemon Attack</h1>';
 $gamePokemon->attack('discharge');
 
-echo '<h1 class="text-center blue">STATIC Pokemon Attack</h1>';
+echo '<h1 class="text-center yellow">STATIC Pokemon Attack</h1>';
 $gamePokemon->attack('');
 echo '<h3 class="ms-0">Changing Default PRIVATE Attack</h3>';
 $gamePokemon->setDefaultMove('spark');
-echo '<h1 class="text-center blue">STATIC Pokemon Attack</h1>';
+echo '<h1 class="text-center yellow">STATIC Pokemon Attack</h1>';
 $gamePokemon->attack('');
 
 echo '<h1 class="text-center">Pokemon Attack With Damage</h1>';

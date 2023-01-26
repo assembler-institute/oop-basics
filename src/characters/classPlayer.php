@@ -3,6 +3,7 @@ require_once('../config.php');
 require_once(SITE_ROOT . '/src/characters/classCharacter.php');
 require_once(SITE_ROOT . '/src/items/classPlayerBag.php');
 require_once(SITE_ROOT . '/src/pokemon/classPlayerPokemon.php');
+require_once(SITE_ROOT . '/src/views/containerImg.php');
 
 final class Player extends Character
 {
@@ -54,10 +55,10 @@ final class Player extends Character
   }
   function toString(): void
   {
-    echo '<h1>Player</h1>';
+    setContainerWithImage('green', 'Player', 'player');
     echo parent::toString() .
       "Money - <strong>" . $this->money . '$</strong><br>';
-    echo '<h1>Items</h1>';
+    setContainerWithImage('green', 'Items', 'bag');
     echo $this->items->toString();
     echo $this->lastPokemon->toString() . '</strong><br>';
   }

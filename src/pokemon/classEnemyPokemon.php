@@ -1,6 +1,8 @@
 <?php
 require_once(SITE_ROOT . '/src/pokemon/classPokemon.php');
 require_once(SITE_ROOT . '/src/fight/classSimpleAttack.php');
+require_once(SITE_ROOT . '/src/views/containerImg.php');
+
 final class EnemyPokemon extends Pokemon
 {
   private int $experience;
@@ -29,7 +31,7 @@ final class EnemyPokemon extends Pokemon
 
   function toString(): void
   {
-    echo "<h1>Enemy Pokemon</h1>";
+        setContainerWithImage('green', 'Pokemon', 'meowth');
     echo "Name - <b>" . $this->name . '</b><br>';
     echo "Level - <b>" . $this->level . '</b><br>';
     echo "Life - <b>" . $this->life . '</b><br>';

@@ -3,6 +3,8 @@ require_once('../config.php');
 require_once(SITE_ROOT . '/src/characters/classCharacter.php');
 require_once(SITE_ROOT . '/src/items/classPlayerBag.php');
 require_once(SITE_ROOT . '/src/pokemon/classEnemyPokemon.php');
+require_once(SITE_ROOT . '/src/views/containerImg.php');
+
 
 final class Machine extends Character
 {
@@ -32,7 +34,7 @@ final class Machine extends Character
   }
   function toString(): void
   {
-    echo '<h1>Machine</h1>';
+    setContainerWithImage('green', 'Machine', 'machine');
     echo parent::toString() . '<br>';
     echo $this->lastPokemon->toString() . '</strong><br>';
   }

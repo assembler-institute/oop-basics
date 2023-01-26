@@ -50,7 +50,7 @@ function getInstance(): Game
     'iron Trail' => 30,
     'spark' => 80
   ]);
-  $meow = new EnemyPokemon('Meow', 300, new SimpleAttack('blow up', 10), [
+  $meow = new EnemyPokemon('Meowth', 300, new SimpleAttack('blow up', 10), [
     'hit' => 20
   ]);
   $bag = new PlayerBag(10, $phone);
