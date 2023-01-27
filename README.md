@@ -1,5 +1,5 @@
 # Project Title
-<p>PHP Basics</p>
+<p>Object-Oriented programming - basics</p>
 
 ## Getting Started
 <p>To start this project you only have to run Apache server and open it in your browser with one of the pages that this project include. I recommend that you install XAMPP</p>
@@ -30,13 +30,13 @@
 
 ## How can you open a Page?
 <p>You just write "localhost/php-oop-basics/" and you could view this page content.</p>
-<img alt="URL" src="assets/path.png" />
+<img alt="URL" src="assets/pok.png" />
 
 
 ## Built With
 <ul>
   <li>PHP</li>
-  <li>POO</li>
+  <li>OOP</li>
   <li>Visual Studio Code</li>
 </ul>
 
