@@ -2,8 +2,6 @@
     require './abstract-class.php';
 
     class Vehicle extends Dealership{
-        const VEHICLE_DEALER = 'Name of Dealership';
-        
         protected String $strType;
         protected String $strStyle;
         protected String $strEnergy;
