@@ -1,0 +1,51 @@
+body {
+  background: url("../images/pokemon2.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+  text-align: left;
+  color: white;
+  letter-spacing: 2px;
+  overflow: visible;
+  width: 25%;
+  margin-left: 30px;
+  font-size: 1.2em;
+}
+
+.text-center {
+  background-color: #892130;
+}
+
+.red {
+  color: red;
+}
+
+.yellow {
+  background-color: #c48537;
+}
+
+.green {
+  background-color: #39541d;
+}
+
+.ms-0 {
+  margin-left: -30px;
+}
+
+.title-img {
+  display: flex;
+  padding: 20px 0;
+}
+
+.title {
+  min-width: 80%;
+}
+
+.img {
+  max-width: 100px;
+  max-height: 110px;
+}
