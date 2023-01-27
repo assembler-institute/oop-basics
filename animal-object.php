@@ -17,7 +17,7 @@ $crocodile->canBreath("Crocodile", "When basking on land with the mouth open, cr
 $crocodile->canMove("Crocodile", "The right front and left rear legs are lifted and moved forward while the front right and rear left legs, already on the ground, push backwards, propelling the crocodile's body forward.");
 $crocodile->makeSound("Crocodile", "Adults crocodiles hiss and bellow at each other. Babies chirp when they hatch.");
 
-$cat = new cats ("Cat", "Mammal", 3, true, true, "Maine Coon");
+$cat = new cats ("Cat", "Mammal", 2, true, true, "Maine Coon");
 $cat->setAge($cat->getAge()*7);
 $age = $cat->age;
 $cat->showAnimal("Cat", "Mammal", $age, true, true, "Maine Coon");

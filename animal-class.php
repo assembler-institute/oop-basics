@@ -36,7 +36,7 @@ echo "
     <h1>$name</h1>
     <b>Type:</b> $type,<br>
     <b>Subtype:</b> $subType,<br>
-    <b>Age:</b> $age,<br>
+    <b>Age:</b> $this->age,<br>
     <b>Group:</b> $blood,<br>";
 
 }
