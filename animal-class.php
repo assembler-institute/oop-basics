@@ -60,6 +60,8 @@ public function __destruct(){
     print "Destruct " . __CLASS__ . "\n";
 }
 }
+
+
 ?>
 
 
