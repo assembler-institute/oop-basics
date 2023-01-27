@@ -1,9 +1,10 @@
 <?php
 
     require_once("AbsClass_suitableVehicles.php");
+    require_once("Interface.php");
 
     // Abstract class
-    class Car extends Suitable_circulate_vehicles 
+    class Car extends Suitable_circulate_vehicles implements Contamination
 
     {   // Parameters of the class
         private $serialNumber;
@@ -60,7 +61,7 @@
         public function switchStatusCirculation() 
         {
             if($this->intYear < date("Y") - 50) {
-                echo Car::setStatus("Available to circulate: Inactive");
+                echo Car::setStatus("Available to circulate: Inactive<br>");
             }else {
                 echo Car::getStatus();
             }
@@ -80,13 +81,7 @@
                 
         }
 
-        // Method that return the 4 specifically tires for cars
-        public function tires_cars(){
-            return "4 tires with 'X' height and 'X' width";
-        }
-
         // Method that returns if the car its Electric or no
-
         public function GetBoolElectric() 
         {
         
@@ -98,7 +93,18 @@
 
         }
 
+        public function co2Levels(){
+            if ($this->boolElectric === false){
+                echo "Your CO2 emissions: " . round(100 / rand(2, 100), 2) . " g/km<br>";
+            }
+            
+        }
         
+        public function noiseLevels(){
+            if ($this->boolElectric === false){
+                echo "Noise emissions: " . rand(30, 90) . " dB <br>";
+            }
+        }
         
 
     }
