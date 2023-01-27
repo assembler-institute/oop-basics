@@ -2,6 +2,7 @@
 require_once ("animal-class.php");
 require_once ("animal-with-interitance.php");
 require_once ("interface.php");
+require_once ("abstract-class.php");
 
 
 $tiger = new animals("Tiger", "Mammal", 10, true, true);
@@ -40,5 +41,18 @@ $animals = array($dog, $mouse);
 foreach($animals as $animal) {
     $animal->eat();
   }
+
+// Create objects from the child classes
+echo "<p><b>ABSTRACT CLASS</p></b>";
+$leon = new Leon("Leon", "long");
+echo $leon->whoAreYou();
+echo "<br>";
+
+$pantera = new Pantera("Pantera", "median");
+echo $pantera->whoAreYou();
+echo "<br>";
+
+$tiger = new Tiger("Tiger", "very long");
+echo $tiger->whoAreYou();
 
 ?>

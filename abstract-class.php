@@ -1,42 +1,44 @@
 <?php
 // Parent class
 abstract class Feline {
+  public $name;
   public $whiskerType;
 
-  public function __construct(string $whiskerType) {
+  public function __construct(string $name, string $whiskerType) {
+    $this->name = $name;
     $this->whiskerType = $whiskerType;
   }
-  abstract public function throwObjectInstance() : string;
+  abstract public function whoAreYou() : string;
 }
 
 // Child classes
-class Audi extends Car {
-  public function intro() : string {
-    return "Choose German quality! I'm an $this->name!";
+class Leon extends Feline {
+  public function whoAreYou() : string {
+    return "I'm a king! I'm a $this->name!";
   }
 }
 
-class Volvo extends Car {
-  public function intro() : string {
-    return "Proud to be Swedish! I'm a $this->name!";
+class Pantera extends Feline {
+  public function whoAreYou() : string {
+    return "I'm a very fast ! I'm a $this->name!";
   }
 }
 
-class Citroen extends Car {
-  public function intro() : string {
-    return "French extravagance! I'm a $this->name!";
+class Tiger extends Feline {
+  public function whoAreYou() : string {
+    return "I'm a cute! I'm a $this->name!";
   }
 }
 
 // Create objects from the child classes
-$audi = new audi("Audi");
-echo $audi->intro();
+/*$leon = new Leon("Leon", "long");
+echo $leon->whoAreYou();
 echo "<br>";
 
-$volvo = new volvo("Volvo");
-echo $volvo->intro();
+$pantera = new Pantera("Pantera", "median");
+echo $pantera->whoAreYou();
 echo "<br>";
 
-$citroen = new citroen("Citroen");
-echo $citroen->intro();
+$tiger = new Tiger("Tiger", "very long");
+echo $tiger->whoAreYou();*/
 ?>
