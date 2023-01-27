@@ -1,6 +1,7 @@
 <?php
 
 class animals {
+    public $name;
     public $type;
     public $age;
     public $vertebrates;
@@ -8,15 +9,15 @@ class animals {
 
 
 function __construct(string $name, string $type, int $age, bool $vertebrates, bool $warmBlooded){
-    $this->$name=$name;
-    $this->$type=$type; 
-    $this->$age=$age;
-    $this->$vertebrates=$vertebrates;
-    $this->$warmBlooded=$warmBlooded; 
+    $this->name=$name;
+    $this->type=$type; 
+    $this->age=$age;
+    $this->vertebrates=$vertebrates;
+    $this->warmBlooded=$warmBlooded; 
 }
 
 
-function showAnimal(string $name, string $type, int $age, bool $vertebrates, bool $warmBlooded){
+public function showAnimal(string $name, string $type, $age, bool $vertebrates, bool $warmBlooded){
    $subType = true; 
    $blood = true; 
     if ($vertebrates === true){
@@ -40,22 +41,22 @@ echo "
 
 }
 
-function canBreath(string $name, string $breath){
+public function canBreath(string $name, string $breath){
  echo "<p><b>How Do $name Breathe?</b></p> $breath";
 }
 
-function canMove(string $name, string $movement){
+public function canMove(string $name, string $movement){
     echo "<p><b>How Do $name move?</b></p> $movement";
 }
 
-function makeSound(string $name, string $sound){
+public function makeSound(string $name, string $sound){
     echo "<p><b>Does $name make any sound?</b></p> $sound";
 }
 
 
 
 
-function __destruct(){
+public function __destruct(){
     print "Destruct " . __CLASS__ . "\n";
 }
 }
