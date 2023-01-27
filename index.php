@@ -5,6 +5,7 @@ require_once(SITE_ROOT . '/src/models/items/classPlayerBag.php');
 require_once(SITE_ROOT . '/src/models/items/classSmartphone.php');
 require_once(SITE_ROOT . '/src/models/fight/classGame.php');
 require_once(SITE_ROOT . '/src/models/characters/classPlayer.php');
+require_once(SITE_ROOT . '/src/models/pokemon/classWildPokemon.php');
 
 $game = getInstance();
 
@@ -51,5 +52,10 @@ if ($result == 1)
 
 echo '<h1 class="text-center">Machine Complaining</h1>';
 $game->getMachine()->complain();
-echo '</h1>';
+
+
+$wild = new WildPokemon('Pidgeot', 200, new SimpleAttack('wind', 10), ['wind hit'], "Mum's House");
+echo '<h1 class="text-center">Multiple TRAITS Wild Pokemon</h1>';
+echo 'Wild pokemon is called <b>' . $wild->getName() . '</b><br>';
+echo $wild->attack('wind hit');
 echo '</div>';

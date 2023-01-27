@@ -54,7 +54,7 @@ final class Player extends Character
   function toString(): void
   {
     setContainerWithImage('green', 'Player', 'player');
-    echo parent::toString() .
+    echo "Name - <strong>" . $this->name . '</strong><br>' . 
       "Money - <strong>" . $this->money . '$</strong><br>';
     setContainerWithImage('green', 'Items', 'bag');
     echo $this->items->toString();

@@ -8,7 +8,6 @@ final class EnemyPokemon extends Pokemon
 
   private static $defaultMove = 'thunderbolt';
 
-
   public function __construct(string $name, int $life, SimpleAttack $attack, array $moves)
   {
     parent::__construct($name, $life, $attack, $moves);

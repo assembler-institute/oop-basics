@@ -69,3 +69,4 @@ abstract class Pokemon
       $this->level . '<br>';
   }
 }
+

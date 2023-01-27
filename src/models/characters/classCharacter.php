@@ -5,7 +5,7 @@ require_once(SITE_ROOT . '/src/models/pokemon/classPlayerPokemon.php');
 require_once(SITE_ROOT . '/src/models/pokemon/classEnemyPokemon.php');
 require_once(SITE_ROOT . '/src/views/containerImg.php');
 
-class Character
+abstract class Character
 {
 
   protected $name;
@@ -30,8 +30,5 @@ class Character
     echo $this->name . ' is talking . . .';
   }
 
-  function toString(): void
-  {
-    echo "Name - <strong>" . $this->name . '</strong><br>';
-  }
+  abstract function toString(): void;
 }

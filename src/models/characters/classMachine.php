@@ -33,7 +33,7 @@ final class Machine extends Character
   function toString(): void
   {
     setContainerWithImage('green', 'Machine', 'machine');
-    echo parent::toString() . '<br>';
+    echo "Name - <strong>" . $this->name . '</strong><br>' . '<br>';
     echo $this->lastPokemon->toString() . '</strong><br>';
   }
 }
