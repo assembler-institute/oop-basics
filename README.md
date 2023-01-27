@@ -23,15 +23,10 @@ In the event that you prefer to use a tool that installs everything you need to 
 
 XAMPP is a completely free and easy to install Apache distribution that contains MariaDB, PHP, and Perl. The XAMPP installation package has been designed to be incredibly easy to install and use.
 
-<img src='./assets/img/xampp-homepage.png' width='600' alt='xampp homepage'>
-
 You have to go to the [download page](https://www.apachefriends.org/es/download.html) and it will automatically recommend installing the latest version available.
-
-<img src='./assets/img/xampp-download.png' width='600' alt='xampp download'>
 
 Once downloaded and installed, in the case that the Windows operating system you will see the following screen, in which you will only have to start the Apache service.
 
-<img src='./assets/img/xampp-app.png' width='600' alt='xampp app'>
 
 ## Getting Started
 
