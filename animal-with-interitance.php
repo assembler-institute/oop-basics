@@ -3,7 +3,7 @@ require_once("animal-class.php");
 require_once("animal-object.php");
 
 class cats extends animals{
-    public $breed;
+    protected $breed;
 
     function __construct(string $name, string $type, int $age, bool $vertebrates, bool $warmBlooded, string $breed){
         parent::__construct($name, $type, $age, $vertebrates, $warmBlooded);
@@ -20,6 +20,8 @@ public function makePurr(string $purr){
       </audio>";
 }
 
+// override //
+
 public function getAge(){
     return $this->age;
 }
@@ -35,9 +37,5 @@ public function makeSound(string $name, string $sound){
 }
     
 }
-
-
-
-
 
 ?>
