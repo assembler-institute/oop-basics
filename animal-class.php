@@ -42,15 +42,15 @@ echo "
 }
 
 public function canBreath(string $name, string $breath){
- echo "<p><b>How Do $name Breathe?</b></p> $breath";
+ echo "<br><p><b>How Do $name Breathe?</b></p> $breath";
 }
 
 public function canMove(string $name, string $movement){
-    echo "<p><b>How Do $name move?</b></p> $movement";
+    echo "<br><p><b>How Do $name move?</b></p> $movement";
 }
 
 public function makeSound(string $name, string $sound){
-    echo "<p><b>Does $name make any sound?</b></p> $sound";
+    echo "<br><p><b>Does $name make any sound?</b></p> $sound";
 }
 
 
@@ -60,7 +60,6 @@ public function __destruct(){
     print "Destruct " . __CLASS__ . "\n";
 }
 }
-
 
 ?>
 

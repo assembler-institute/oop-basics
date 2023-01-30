@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+
+<div class="container-md">  
+
 <?php
 require_once ("animal-class.php");
 require_once ("animal-with-interitance.php");
@@ -10,7 +25,6 @@ $tiger->showAnimal("Tiger", "Mammal", 10, true, true);
 $tiger->canBreath("Tiger", "The respiratory system consists of the lungs. Just like humans and all mammals, Siberian tigers breathe through their nose and mouth into their lungs.");
 $tiger->canMove("Tiger", "They can run, jump, climb. The hind legs of the tiger are longer than their front legs. This characteristic enables them to leap forward distances up to 10 meters.");
 $tiger->makeSound("Tiger", "They growl, roar, chuff and moan.");
-
 
 $crocodile = new animals("Crocodile", "Reptiles", 25, true, false);
 $crocodile->showAnimal("Crocodile", "Reptiles", 25, true, false);
@@ -32,7 +46,7 @@ $cat->setMeow("Meoooooow");*/
 $cat->makeSound("cat", "meoww");
 
 
-echo "<br><br>";
+echo "<br><hr>INTERFACE";
 //Interface
 $dog = new Dog();
 $mouse = new Mouse();
@@ -40,10 +54,12 @@ $animals = array($dog, $mouse);
 
 foreach($animals as $animal) {
     $animal->eat();
+    $animal->move();
   }
+ 
 
 // Create objects from the child classes
-echo "<p><b>ABSTRACT CLASS</p></b>";
+echo "<br><p><b>ABSTRACT CLASS</p></b>";
 $leon = new Leon("Leon", "long");
 echo $leon->whoAreYou();
 echo "<br>";
@@ -53,6 +69,10 @@ echo $pantera->whoAreYou();
 echo "<br>";
 
 $tiger = new Tiger("Tiger", "very long");
-echo $tiger->whoAreYou();
+echo $tiger->whoAreYou() . "<br><br>";
 
 ?>
+
+</div>
+</body>
+</html>

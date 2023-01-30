@@ -7,11 +7,11 @@ interface AliveAnimal{
 class Dog implements AliveAnimal {
     
     public function eat() {
-      echo "<b>Dog</b> likes meat <br>";
+      echo "<br><b>Dog</b> likes meat <br>";
     }
 
     public function move() {
-        echo "Dog can run, jump, climb";
+        echo "<b>Dog</b> can run, jump, climb <br>";
       }
   }
   
@@ -19,7 +19,7 @@ class Dog implements AliveAnimal {
   class Mouse implements AliveAnimal {
     
     public function move() {
-      echo "Mouse can run, jump, climb";
+      echo "<b>Mouse</b> can run, jump, climb <br>";
     }
     
     public function eat() {
@@ -27,7 +27,5 @@ class Dog implements AliveAnimal {
   }
 
   }
-
-  
 
 ?>
