@@ -134,3 +134,16 @@ Namespaces are qualifiers that solve two different problems:
 2. They allow the same name to be used for more than one class
 
 In this file you will learn how to create and use namespaces.
+
+### [17 - ClassDogs](17-ClassDogs.php) <!-- omit in toc -->
+
+### [18 - ClassDogs2](18-ClassDogs2.php) <!-- omit in toc -->
+
+### [19 - IndexDogs](19-IndexDogs.php) <!-- omit in toc -->
+
+### [20 - Abstract](20-ClassAbstract.php) <!-- omit in toc -->
+
+### [21 - Interface](21-ClassInterface.php) <!-- omit in toc -->
+
+
+These Basics seemed simple but nothing beyond reality, when documenting you see that the methods can be developed in different ways and I commented on one of them because I did not know which one was correct, although the result is the same. For the rest it contains many very interesting sections.
