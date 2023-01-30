@@ -1,5 +1,5 @@
 <?php
-require_once('./Plain.php');
+require_once('./Plane.php');
 ?>
 
 <!DOCTYPE html>
@@ -24,11 +24,11 @@ require_once('./Plain.php');
 
     <hr>
 
-    <h1>Plain - Subclass</h1>
+    <h1>Plane - Subclass</h1>
     <?php
-    $plain = new Plain(2, 'Transport', 1280000, 180, 9.9, 'Kerosene', 5);
+    $plane = new Plane(2, 'Transport', 1280000, 180, 9.9, 'Kerosene', 5);
     echo '<pre>';
-    print_r($plain->getToolInfo());
+    print_r($plane->getToolInfo());
     echo '</pre>';
     ?>
 </body>

@@ -2,7 +2,7 @@
 
 require_once('./Vehicle.php');
 
-class Plain extends Vehicle {
+class Plane extends Vehicle {
     static $numOfPropellants;
 
     function __construct(int $id, string $type, int $price, int $seating, float $security, string $engine, int $numOfPropellants) {

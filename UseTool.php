@@ -1,6 +1,6 @@
 <?php
 
 interface UseTool {    
-    public function movement1(): string;
-    public function movement2(): string;
+    public function motion1(): string;
+    public function motion2(): string;
 }

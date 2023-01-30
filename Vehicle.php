@@ -43,11 +43,11 @@ class Vehicle extends Tool {
         return $init;
     }
 
-    public function movement1(): string {
-        return 'Doing movement1';
+    public function motion1(): string {
+        return 'Doing motion1';
     }
 
-    public function movement2(): string {
-        return 'Doing movement2';
+    public function motion2(): string {
+        return 'Doing motion2';
     }
 }

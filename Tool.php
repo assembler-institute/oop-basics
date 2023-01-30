@@ -43,7 +43,7 @@ abstract class Tool implements UseTool {
 
     abstract public function doSomething(string $init);
 
-    abstract public function movement1(): string;
+    abstract public function motion1(): string;
 
-    abstract public function movement2(): string;
+    abstract public function motion2(): string;
 }
