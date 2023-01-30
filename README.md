@@ -12,6 +12,7 @@ In this project you will learn the basics of OOP using mobile devices as a refer
 - [Tools](#tools)
 - [OOP Introduction](#oop-introduction)
 - [Project files](#project-files)
+- [Project Classes](#project-classes)
 
 ## Getting Started
 
@@ -65,72 +66,32 @@ Object-oriented programming (OOP) is a programming paradigm based on the concept
 
 ## Project files
 
-### [01 - Classes](./01-classes.php) <!-- omit in toc -->
+### [01 - entertainment](./01-entertainment.php) <!-- omit in toc -->
 
-The OOP paradigm encapsulates concepts of the real world in what is called as Classes which create Objects. In this file you will learn how to create a class and instanciate it.
+is the abstract class
 
-### [02 - Properties](02-properties.php) <!-- omit in toc -->
+### [02 - dance](02-dance.php) <!-- omit in toc -->
 
-Class member variables are called properties. In this file, you will learn how to add properties to a class and get them when the class is instantiated.
+is the base class
 
-### [03 - Methods](03-methods.php) <!-- omit in toc -->
+### [03 - moderno](03-moderno.php) <!-- omit in toc -->
 
-Properties define the characteristics of an object and the methods (functions in a class are called methods) which define the behavior of the Class. In this file you will learn how to create methods inside a class.
+is the class inherited from dance
 
-### [04 - Getters](04-getters.php) <!-- omit in toc -->
+### [04 - danceOnlineAPP](04-danceOnlineAPP3.php) <!-- omit in toc -->
 
-The get method returns the attribute value, usually there is a get method for each attribute of the class. In this file you will learn how to create **getter** methods.
+is the class where we implement an interface.
 
-### [05 - Setters](05-setters.php) <!-- omit in toc -->
+### [05 - recreation](05-recreation.php) <!-- omit in toc -->
 
-The set method sets the attribute value, usually there is a get method for each attribute of the class. In this file you will learn how to create **setter** methods.
+is where we instantiate the objects
 
-### [06 - Constructors](06-constructors.php) <!-- omit in toc -->
+## project-classes
 
-A constructor allows you to initialize an object's properties upon creation of the object. In this file you will learn how to create the constructor method.
+### [1-entertainment] <!-- omit in toc -->
 
-### [07 - Inheritance problem](07-inheritance-problem.php) <!-- omit in toc -->
+### [2-dance]
+### [3-moderno]
 
-There are several disadvantages of not applying inheritance in our code. In this file you will lean what's the problem if you don't apply any inheritance in your code.
+### [4-danceOnline]
 
-### [08 - Inheritance soluction](08-inheritance-solution.php) <!-- omit in toc -->
-
-The child class will inherit all the public and protected properties and methods from the parent class. In addition, it can have its own properties and methods. In this file you will learn how to apply the inheritance in your code.
-
-### [09 - Public, private & protected](09-public-private-protected.php) <!-- omit in toc -->
-
-Properties and methods can have access modifiers which control where they can be accessed. In this file you will learn le three access modifiers.
-
-### [10 - Static](10-static.php) <!-- omit in toc -->
-
-Static properties and methods can be called directly - without creating an instance of the class first. In this file you will learn how to use static properties and methods.
-
-### [11 - Const](11-const.php) <!-- omit in toc -->
-
-Constants cannot be changed once it is declared. Class constants can be useful if you need to define some constant data within a class. In this file you will learn how to create constants within a class.
-
-### [12 - Abstract classes](12-abstract-classes.php) <!-- omit in toc -->
-
-Abstract classes and methods are when the parent class has a named method, but need its child class(es) to fill out the tasks. In this file you will learn how to create and use abstract classes.
-
-### [13 - Interfaces](13-interfaces.php) <!-- omit in toc -->
-
-Interfaces allow you to specify what methods a class should implement.
-Interfaces make it easy to use a variety of different classes in the same way. When one or more classes use the same interface, it is referred to as "polymorphism". In this file you will learn how to create and extend interfaces.
-
-### [14 - Overriding](14-overriding.php) <!-- omit in toc -->
-
-In function overriding, both parent and child classes should have same function name with and number of arguments. In this file you will learn how to implement overriding.
-
-### [15 - Overloading](15-overloading.php) <!-- omit in toc -->
-
-Function overloading contains same function name and that function preforms different task according to number of arguments. In this file you will learn how to implement overloading.
-
-### [16 - Namespaces](16-namespaces.php) <!-- omit in toc -->
-
-Namespaces are qualifiers that solve two different problems:
-
-1. They allow for better organization by grouping classes that work together to perform a task
-2. They allow the same name to be used for more than one class
-
-In this file you will learn how to create and use namespaces.
