@@ -134,3 +134,14 @@ Namespaces are qualifiers that solve two different problems:
 2. They allow the same name to be used for more than one class
 
 In this file you will learn how to create and use namespaces.
+
+## OOP Pill
+
+### Author comments
+
+In this pill I created three different classes inherited from the next one. The top one being abstract and the base one defining the methods indicated in the abstract taken from the interface.
+
+The idea behind is a theater system that register different plays for the next season and need certain info. If we instantiate the method welcome from the class StageSpectacles it will return a message indicating us to add more info which means we need to instantiate from the class Plays. If we call the same method in this class we will be able to enter the system. This is called method overloading.
+
+Also a property overriding is shown when the number of artists is below the indicated one. A message will be shown to update it and when the number meets the requirement it will allow us to continue.
+
